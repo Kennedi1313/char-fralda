@@ -1,0 +1,2023 @@
+{
+  "revision": "b029f677ca4007830a7ec8e4bdbd717b0d0eb361",
+  "items": [
+    {
+      "id": "gloves",
+      "category": "accessory",
+      "label": "",
+      "images": {
+        "male": "/assets/lpc/catalog/gloves-male.png",
+        "female": "/assets/lpc/catalog/gloves-female.png"
+      }
+    },
+    {
+      "id": "neck-scarf-white-png",
+      "category": "accessory",
+      "label": "Cachecol",
+      "images": {
+        "male": "/assets/lpc/catalog/neck-scarf-white-png-male.png",
+        "female": "/assets/lpc/catalog/neck-scarf-white-png-female.png"
+      }
+    },
+    {
+      "id": "neck-capeclip",
+      "category": "accessory",
+      "label": "capeclip",
+      "images": {
+        "male": "/assets/lpc/catalog/neck-capeclip-male.png",
+        "female": "/assets/lpc/catalog/neck-capeclip-female.png"
+      }
+    },
+    {
+      "id": "neck-capetie",
+      "category": "accessory",
+      "label": "capetie",
+      "images": {
+        "male": "/assets/lpc/catalog/neck-capetie-male.png",
+        "female": "/assets/lpc/catalog/neck-capetie-female.png"
+      }
+    },
+    {
+      "id": "torso-waist-belt-leather-white",
+      "category": "accessory",
+      "label": "Cinto de couro",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-waist-belt-leather-white-male.png",
+        "female": "/assets/lpc/catalog/torso-waist-belt-leather-white-female.png"
+      }
+    },
+    {
+      "id": "torso-waist-belt-double-white",
+      "category": "accessory",
+      "label": "Cinto duplo",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-waist-belt-double-white-male.png",
+        "female": "/assets/lpc/catalog/torso-waist-belt-double-white-female.png"
+      }
+    },
+    {
+      "id": "torso-waist-belt-other-white",
+      "category": "accessory",
+      "label": "Cinto fino",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-waist-belt-other-white-male.png",
+        "female": "/assets/lpc/catalog/torso-waist-belt-other-white-female.png"
+      }
+    },
+    {
+      "id": "torso-waist-belt-other-formal",
+      "category": "accessory",
+      "label": "Cinto social",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-waist-belt-other-formal-male.png"
+      }
+    },
+    {
+      "id": "torso-waist-belt-loose-white",
+      "category": "accessory",
+      "label": "Cinto solto",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-waist-belt-loose-white-male.png",
+        "female": "/assets/lpc/catalog/torso-waist-belt-loose-white-female.png"
+      }
+    },
+    {
+      "id": "torso-waist-belt-belly-white",
+      "category": "accessory",
+      "label": "Cinturão largo",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-waist-belt-belly-white-male.png",
+        "female": "/assets/lpc/catalog/torso-waist-belt-belly-white-female.png"
+      }
+    },
+    {
+      "id": "neck-cravat",
+      "category": "accessory",
+      "label": "cravat",
+      "images": {
+        "male": "/assets/lpc/catalog/neck-cravat-male.png",
+        "female": "/assets/lpc/catalog/neck-cravat-female.png"
+      }
+    },
+    {
+      "id": "facial-earring",
+      "category": "accessory",
+      "label": "earring",
+      "images": {
+        "male": "/assets/lpc/catalog/facial-earring-male.png",
+        "female": "/assets/lpc/catalog/facial-earring-female.png"
+      }
+    },
+    {
+      "id": "facial-eyepatch",
+      "category": "accessory",
+      "label": "eyepatch",
+      "images": {
+        "male": "/assets/lpc/catalog/facial-eyepatch-male.png",
+        "female": "/assets/lpc/catalog/facial-eyepatch-female.png"
+      }
+    },
+    {
+      "id": "torso-waist-sash-white",
+      "category": "accessory",
+      "label": "Faixa de cintura",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-waist-sash-white-male.png",
+        "female": "/assets/lpc/catalog/torso-waist-sash-white-female.png"
+      }
+    },
+    {
+      "id": "torso-waist-sash-narrow-white",
+      "category": "accessory",
+      "label": "Faixa estreita de cintura",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-waist-sash-narrow-white-male.png",
+        "female": "/assets/lpc/catalog/torso-waist-sash-narrow-white-female.png"
+      }
+    },
+    {
+      "id": "neck-tie-bow-png",
+      "category": "accessory",
+      "label": "Gravata borboleta",
+      "images": {
+        "male": "/assets/lpc/catalog/neck-tie-bow-png-male.png",
+        "female": "/assets/lpc/catalog/neck-tie-bow-png-female.png"
+      }
+    },
+    {
+      "id": "neck-tie-neck-png",
+      "category": "accessory",
+      "label": "Gravata comprida",
+      "images": {
+        "male": "/assets/lpc/catalog/neck-tie-neck-png-male.png",
+        "female": "/assets/lpc/catalog/neck-tie-neck-png-female.png"
+      }
+    },
+    {
+      "id": "neck-jabot",
+      "category": "accessory",
+      "label": "jabot",
+      "images": {
+        "male": "/assets/lpc/catalog/neck-jabot-male.png",
+        "female": "/assets/lpc/catalog/neck-jabot-female.png"
+      }
+    },
+    {
+      "id": "facial-monocle-png",
+      "category": "accessory",
+      "label": "Monóculo",
+      "images": {
+        "male": "/assets/lpc/catalog/facial-monocle-png-male.png",
+        "female": "/assets/lpc/catalog/facial-monocle-png-female.png"
+      }
+    },
+    {
+      "id": "neck-necklace",
+      "category": "accessory",
+      "label": "necklace",
+      "images": {
+        "female": "/assets/lpc/catalog/neck-necklace-female.png"
+      }
+    },
+    {
+      "id": "facial-glasses-png",
+      "category": "accessory",
+      "label": "Óculos",
+      "images": {
+        "male": "/assets/lpc/catalog/facial-glasses-png-male.png",
+        "female": "/assets/lpc/catalog/facial-glasses-png-female.png"
+      }
+    },
+    {
+      "id": "facial-sunglasses-png",
+      "category": "accessory",
+      "label": "Óculos de sol",
+      "images": {
+        "male": "/assets/lpc/catalog/facial-sunglasses-png-male.png",
+        "female": "/assets/lpc/catalog/facial-sunglasses-png-female.png"
+      }
+    },
+    {
+      "id": "beards-beard",
+      "category": "beard",
+      "label": "beard",
+      "images": {
+        "male": "/assets/lpc/catalog/beards-beard-male.png"
+      }
+    },
+    {
+      "id": "beards-bigstache",
+      "category": "beard",
+      "label": "bigstache",
+      "images": {
+        "male": "/assets/lpc/catalog/beards-bigstache-male.png"
+      }
+    },
+    {
+      "id": "beards-mustache",
+      "category": "beard",
+      "label": "mustache",
+      "images": {
+        "male": "/assets/lpc/catalog/beards-mustache-male.png"
+      }
+    },
+    {
+      "id": "beards-winter",
+      "category": "beard",
+      "label": "winter",
+      "images": {
+        "male": "/assets/lpc/catalog/beards-winter-male.png",
+        "female": "/assets/lpc/catalog/beards-winter-female.png"
+      }
+    },
+    {
+      "id": "legs-armour-plate",
+      "category": "bottom",
+      "label": "armour / plate",
+      "images": {
+        "male": "/assets/lpc/catalog/legs-armour-plate-male.png",
+        "female": "/assets/lpc/catalog/legs-armour-plate-female.png"
+      }
+    },
+    {
+      "id": "torso-aprons-apron-half-white",
+      "category": "bottom",
+      "label": "Avental de cintura",
+      "images": {
+        "female": "/assets/lpc/catalog/torso-aprons-apron-half-white-female.png"
+      }
+    },
+    {
+      "id": "legs-pantaloons-furbrown",
+      "category": "bottom",
+      "label": "Calça com pelúcia",
+      "images": {
+        "male": "/assets/lpc/catalog/legs-pantaloons-furbrown-male.png"
+      }
+    },
+    {
+      "id": "legs-pantaloons-formal",
+      "category": "bottom",
+      "label": "Calça social",
+      "images": {
+        "male": "/assets/lpc/catalog/legs-pantaloons-formal-male.png"
+      }
+    },
+    {
+      "id": "legs-pantaloons-formal-striped",
+      "category": "bottom",
+      "label": "Calça social listrada",
+      "images": {
+        "male": "/assets/lpc/catalog/legs-pantaloons-formal-striped-male.png"
+      }
+    },
+    {
+      "id": "legs-leggings",
+      "category": "bottom",
+      "label": "leggings",
+      "images": {
+        "female": "/assets/lpc/catalog/legs-leggings-female.png"
+      }
+    },
+    {
+      "id": "legs-pantaloons",
+      "category": "bottom",
+      "label": "pantaloons",
+      "images": {
+        "male": "/assets/lpc/catalog/legs-pantaloons-male.png"
+      }
+    },
+    {
+      "id": "legs-pants",
+      "category": "bottom",
+      "label": "pants",
+      "images": {
+        "male": "/assets/lpc/catalog/legs-pants-male.png",
+        "female": "/assets/lpc/catalog/legs-pants-female.png"
+      }
+    },
+    {
+      "id": "legs-skirts-belle",
+      "category": "bottom",
+      "label": "skirts / belle",
+      "images": {
+        "female": "/assets/lpc/catalog/legs-skirts-belle-female.png"
+      }
+    },
+    {
+      "id": "legs-skirts-legion",
+      "category": "bottom",
+      "label": "skirts / legion",
+      "images": {
+        "female": "/assets/lpc/catalog/legs-skirts-legion-female.png"
+      }
+    },
+    {
+      "id": "legs-skirts-overskirt",
+      "category": "bottom",
+      "label": "skirts / overskirt",
+      "images": {
+        "female": "/assets/lpc/catalog/legs-skirts-overskirt-female.png"
+      }
+    },
+    {
+      "id": "legs-skirts-plain",
+      "category": "bottom",
+      "label": "skirts / plain",
+      "images": {
+        "male": "/assets/lpc/catalog/legs-skirts-plain-male.png",
+        "female": "/assets/lpc/catalog/legs-skirts-plain-female.png"
+      }
+    },
+    {
+      "id": "legs-skirts-slit",
+      "category": "bottom",
+      "label": "skirts / slit",
+      "images": {
+        "female": "/assets/lpc/catalog/legs-skirts-slit-female.png"
+      }
+    },
+    {
+      "id": "legs-skirts-straight",
+      "category": "bottom",
+      "label": "skirts / straight",
+      "images": {
+        "female": "/assets/lpc/catalog/legs-skirts-straight-female.png"
+      }
+    },
+    {
+      "id": "cape-solid",
+      "category": "cape",
+      "label": "solid",
+      "images": {
+        "male": "/assets/lpc/catalog/cape-solid-male.png",
+        "female": "/assets/lpc/catalog/cape-solid-female.png"
+      }
+    },
+    {
+      "id": "cape-tattered",
+      "category": "cape",
+      "label": "tattered",
+      "images": {
+        "female": "/assets/lpc/catalog/cape-tattered-female.png"
+      }
+    },
+    {
+      "id": "cape-trim",
+      "category": "cape",
+      "label": "trim",
+      "images": {
+        "female": "/assets/lpc/catalog/cape-trim-female.png"
+      }
+    },
+    {
+      "id": "hair-afro",
+      "category": "hair",
+      "label": "afro",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-afro-male.png",
+        "female": "/assets/lpc/catalog/hair-afro-female.png"
+      }
+    },
+    {
+      "id": "hair-balding",
+      "category": "hair",
+      "label": "balding",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-balding-male.png",
+        "female": "/assets/lpc/catalog/hair-balding-female.png"
+      }
+    },
+    {
+      "id": "hair-bangs",
+      "category": "hair",
+      "label": "bangs",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-bangs-male.png",
+        "female": "/assets/lpc/catalog/hair-bangs-female.png"
+      }
+    },
+    {
+      "id": "hair-bangs-bun",
+      "category": "hair",
+      "label": "bangs bun",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-bangs-bun-male.png",
+        "female": "/assets/lpc/catalog/hair-bangs-bun-female.png"
+      }
+    },
+    {
+      "id": "hair-bangslong",
+      "category": "hair",
+      "label": "bangslong",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-bangslong-male.png",
+        "female": "/assets/lpc/catalog/hair-bangslong-female.png"
+      }
+    },
+    {
+      "id": "hair-bangslong2",
+      "category": "hair",
+      "label": "bangslong2",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-bangslong2-male.png",
+        "female": "/assets/lpc/catalog/hair-bangslong2-female.png"
+      }
+    },
+    {
+      "id": "hair-bangsshort",
+      "category": "hair",
+      "label": "bangsshort",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-bangsshort-male.png",
+        "female": "/assets/lpc/catalog/hair-bangsshort-female.png"
+      }
+    },
+    {
+      "id": "hair-bedhead",
+      "category": "hair",
+      "label": "bedhead",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-bedhead-male.png",
+        "female": "/assets/lpc/catalog/hair-bedhead-female.png"
+      }
+    },
+    {
+      "id": "hair-bob",
+      "category": "hair",
+      "label": "bob",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-bob-male.png",
+        "female": "/assets/lpc/catalog/hair-bob-female.png"
+      }
+    },
+    {
+      "id": "hair-bob-side-part",
+      "category": "hair",
+      "label": "bob side part",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-bob-side-part-male.png",
+        "female": "/assets/lpc/catalog/hair-bob-side-part-female.png"
+      }
+    },
+    {
+      "id": "hair-braid",
+      "category": "hair",
+      "label": "braid",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-braid-male.png",
+        "female": "/assets/lpc/catalog/hair-braid-female.png"
+      }
+    },
+    {
+      "id": "hair-braid2",
+      "category": "hair",
+      "label": "braid2",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-braid2-male.png",
+        "female": "/assets/lpc/catalog/hair-braid2-female.png"
+      }
+    },
+    {
+      "id": "hair-bunches",
+      "category": "hair",
+      "label": "bunches",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-bunches-male.png",
+        "female": "/assets/lpc/catalog/hair-bunches-female.png"
+      }
+    },
+    {
+      "id": "hair-buzzcut",
+      "category": "hair",
+      "label": "buzzcut",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-buzzcut-male.png",
+        "female": "/assets/lpc/catalog/hair-buzzcut-female.png"
+      }
+    },
+    {
+      "id": "hair-cornrows",
+      "category": "hair",
+      "label": "cornrows",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-cornrows-male.png",
+        "female": "/assets/lpc/catalog/hair-cornrows-female.png"
+      }
+    },
+    {
+      "id": "hair-cowlick",
+      "category": "hair",
+      "label": "cowlick",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-cowlick-male.png",
+        "female": "/assets/lpc/catalog/hair-cowlick-female.png"
+      }
+    },
+    {
+      "id": "hair-cowlick-tall",
+      "category": "hair",
+      "label": "cowlick tall",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-cowlick-tall-male.png",
+        "female": "/assets/lpc/catalog/hair-cowlick-tall-female.png"
+      }
+    },
+    {
+      "id": "hair-curly-long",
+      "category": "hair",
+      "label": "curly long",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-curly-long-male.png",
+        "female": "/assets/lpc/catalog/hair-curly-long-female.png"
+      }
+    },
+    {
+      "id": "hair-curly-short",
+      "category": "hair",
+      "label": "curly short",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-curly-short-male.png",
+        "female": "/assets/lpc/catalog/hair-curly-short-female.png"
+      }
+    },
+    {
+      "id": "hair-curtains",
+      "category": "hair",
+      "label": "curtains",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-curtains-male.png",
+        "female": "/assets/lpc/catalog/hair-curtains-female.png"
+      }
+    },
+    {
+      "id": "hair-curtains-long",
+      "category": "hair",
+      "label": "curtains long",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-curtains-long-male.png",
+        "female": "/assets/lpc/catalog/hair-curtains-long-female.png"
+      }
+    },
+    {
+      "id": "hair-dreadlocks-long",
+      "category": "hair",
+      "label": "dreadlocks long",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-dreadlocks-long-male.png",
+        "female": "/assets/lpc/catalog/hair-dreadlocks-long-female.png"
+      }
+    },
+    {
+      "id": "hair-dreadlocks-short",
+      "category": "hair",
+      "label": "dreadlocks short",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-dreadlocks-short-male.png",
+        "female": "/assets/lpc/catalog/hair-dreadlocks-short-female.png"
+      }
+    },
+    {
+      "id": "hair-flat-top-fade",
+      "category": "hair",
+      "label": "flat top fade",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-flat-top-fade-male.png",
+        "female": "/assets/lpc/catalog/hair-flat-top-fade-female.png"
+      }
+    },
+    {
+      "id": "hair-flat-top-straight",
+      "category": "hair",
+      "label": "flat top straight",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-flat-top-straight-male.png",
+        "female": "/assets/lpc/catalog/hair-flat-top-straight-female.png"
+      }
+    },
+    {
+      "id": "hair-half-up",
+      "category": "hair",
+      "label": "half up",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-half-up-male.png",
+        "female": "/assets/lpc/catalog/hair-half-up-female.png"
+      }
+    },
+    {
+      "id": "hair-halfmessy",
+      "category": "hair",
+      "label": "halfmessy",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-halfmessy-male.png",
+        "female": "/assets/lpc/catalog/hair-halfmessy-female.png"
+      }
+    },
+    {
+      "id": "hair-high-and-tight",
+      "category": "hair",
+      "label": "high and tight",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-high-and-tight-male.png",
+        "female": "/assets/lpc/catalog/hair-high-and-tight-female.png"
+      }
+    },
+    {
+      "id": "hair-high-ponytail",
+      "category": "hair",
+      "label": "high ponytail",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-high-ponytail-male.png",
+        "female": "/assets/lpc/catalog/hair-high-ponytail-female.png"
+      }
+    },
+    {
+      "id": "hair-idol",
+      "category": "hair",
+      "label": "idol",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-idol-male.png",
+        "female": "/assets/lpc/catalog/hair-idol-female.png"
+      }
+    },
+    {
+      "id": "hair-jewfro",
+      "category": "hair",
+      "label": "jewfro",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-jewfro-male.png",
+        "female": "/assets/lpc/catalog/hair-jewfro-female.png"
+      }
+    },
+    {
+      "id": "hair-lob",
+      "category": "hair",
+      "label": "lob",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-lob-male.png",
+        "female": "/assets/lpc/catalog/hair-lob-female.png"
+      }
+    },
+    {
+      "id": "hair-long",
+      "category": "hair",
+      "label": "long",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-long-male.png",
+        "female": "/assets/lpc/catalog/hair-long-female.png"
+      }
+    },
+    {
+      "id": "hair-long-band",
+      "category": "hair",
+      "label": "long band",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-long-band-male.png",
+        "female": "/assets/lpc/catalog/hair-long-band-female.png"
+      }
+    },
+    {
+      "id": "hair-long-center-part",
+      "category": "hair",
+      "label": "long center part",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-long-center-part-male.png",
+        "female": "/assets/lpc/catalog/hair-long-center-part-female.png"
+      }
+    },
+    {
+      "id": "hair-long-messy",
+      "category": "hair",
+      "label": "long messy",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-long-messy-male.png",
+        "female": "/assets/lpc/catalog/hair-long-messy-female.png"
+      }
+    },
+    {
+      "id": "hair-long-messy2",
+      "category": "hair",
+      "label": "long messy2",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-long-messy2-male.png",
+        "female": "/assets/lpc/catalog/hair-long-messy2-female.png"
+      }
+    },
+    {
+      "id": "hair-long-tied",
+      "category": "hair",
+      "label": "long tied",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-long-tied-male.png",
+        "female": "/assets/lpc/catalog/hair-long-tied-female.png"
+      }
+    },
+    {
+      "id": "hair-longhawk",
+      "category": "hair",
+      "label": "longhawk",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-longhawk-male.png",
+        "female": "/assets/lpc/catalog/hair-longhawk-female.png"
+      }
+    },
+    {
+      "id": "hair-longknot",
+      "category": "hair",
+      "label": "longknot",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-longknot-male.png",
+        "female": "/assets/lpc/catalog/hair-longknot-female.png"
+      }
+    },
+    {
+      "id": "hair-loose",
+      "category": "hair",
+      "label": "loose",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-loose-male.png",
+        "female": "/assets/lpc/catalog/hair-loose-female.png"
+      }
+    },
+    {
+      "id": "hair-messy1",
+      "category": "hair",
+      "label": "messy1",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-messy1-male.png",
+        "female": "/assets/lpc/catalog/hair-messy1-female.png"
+      }
+    },
+    {
+      "id": "hair-messy2",
+      "category": "hair",
+      "label": "messy2",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-messy2-male.png",
+        "female": "/assets/lpc/catalog/hair-messy2-female.png"
+      }
+    },
+    {
+      "id": "hair-messy3",
+      "category": "hair",
+      "label": "messy3",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-messy3-male.png",
+        "female": "/assets/lpc/catalog/hair-messy3-female.png"
+      }
+    },
+    {
+      "id": "hair-mop",
+      "category": "hair",
+      "label": "mop",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-mop-male.png",
+        "female": "/assets/lpc/catalog/hair-mop-female.png"
+      }
+    },
+    {
+      "id": "hair-natural",
+      "category": "hair",
+      "label": "natural",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-natural-male.png",
+        "female": "/assets/lpc/catalog/hair-natural-female.png"
+      }
+    },
+    {
+      "id": "hair-page",
+      "category": "hair",
+      "label": "page",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-page-male.png",
+        "female": "/assets/lpc/catalog/hair-page-female.png"
+      }
+    },
+    {
+      "id": "hair-page2",
+      "category": "hair",
+      "label": "page2",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-page2-male.png",
+        "female": "/assets/lpc/catalog/hair-page2-female.png"
+      }
+    },
+    {
+      "id": "hair-part2",
+      "category": "hair",
+      "label": "part2",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-part2-male.png",
+        "female": "/assets/lpc/catalog/hair-part2-female.png"
+      }
+    },
+    {
+      "id": "hair-parted",
+      "category": "hair",
+      "label": "parted",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-parted-male.png",
+        "female": "/assets/lpc/catalog/hair-parted-female.png"
+      }
+    },
+    {
+      "id": "hair-pigtails",
+      "category": "hair",
+      "label": "pigtails",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-pigtails-male.png",
+        "female": "/assets/lpc/catalog/hair-pigtails-female.png"
+      }
+    },
+    {
+      "id": "hair-pigtails-bangs",
+      "category": "hair",
+      "label": "pigtails bangs",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-pigtails-bangs-male.png",
+        "female": "/assets/lpc/catalog/hair-pigtails-bangs-female.png"
+      }
+    },
+    {
+      "id": "hair-pixie",
+      "category": "hair",
+      "label": "pixie",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-pixie-male.png",
+        "female": "/assets/lpc/catalog/hair-pixie-female.png"
+      }
+    },
+    {
+      "id": "hair-plain",
+      "category": "hair",
+      "label": "plain",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-plain-male.png",
+        "female": "/assets/lpc/catalog/hair-plain-female.png"
+      }
+    },
+    {
+      "id": "hair-ponytail",
+      "category": "hair",
+      "label": "ponytail",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-ponytail-male.png",
+        "female": "/assets/lpc/catalog/hair-ponytail-female.png"
+      }
+    },
+    {
+      "id": "hair-ponytail2",
+      "category": "hair",
+      "label": "ponytail2",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-ponytail2-male.png",
+        "female": "/assets/lpc/catalog/hair-ponytail2-female.png"
+      }
+    },
+    {
+      "id": "hair-princess",
+      "category": "hair",
+      "label": "princess",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-princess-male.png",
+        "female": "/assets/lpc/catalog/hair-princess-female.png"
+      }
+    },
+    {
+      "id": "hair-sara",
+      "category": "hair",
+      "label": "sara",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-sara-male.png",
+        "female": "/assets/lpc/catalog/hair-sara-female.png"
+      }
+    },
+    {
+      "id": "hair-shorthawk",
+      "category": "hair",
+      "label": "shorthawk",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-shorthawk-male.png",
+        "female": "/assets/lpc/catalog/hair-shorthawk-female.png"
+      }
+    },
+    {
+      "id": "hair-shortknot",
+      "category": "hair",
+      "label": "shortknot",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-shortknot-male.png",
+        "female": "/assets/lpc/catalog/hair-shortknot-female.png"
+      }
+    },
+    {
+      "id": "hair-shoulderl",
+      "category": "hair",
+      "label": "shoulderl",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-shoulderl-male.png",
+        "female": "/assets/lpc/catalog/hair-shoulderl-female.png"
+      }
+    },
+    {
+      "id": "hair-shoulderr",
+      "category": "hair",
+      "label": "shoulderr",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-shoulderr-male.png",
+        "female": "/assets/lpc/catalog/hair-shoulderr-female.png"
+      }
+    },
+    {
+      "id": "hair-single",
+      "category": "hair",
+      "label": "single",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-single-male.png",
+        "female": "/assets/lpc/catalog/hair-single-female.png"
+      }
+    },
+    {
+      "id": "hair-spiked",
+      "category": "hair",
+      "label": "spiked",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-spiked-male.png",
+        "female": "/assets/lpc/catalog/hair-spiked-female.png"
+      }
+    },
+    {
+      "id": "hair-spiked-beehive",
+      "category": "hair",
+      "label": "spiked beehive",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-spiked-beehive-male.png",
+        "female": "/assets/lpc/catalog/hair-spiked-beehive-female.png"
+      }
+    },
+    {
+      "id": "hair-spiked-liberty",
+      "category": "hair",
+      "label": "spiked liberty",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-spiked-liberty-male.png",
+        "female": "/assets/lpc/catalog/hair-spiked-liberty-female.png"
+      }
+    },
+    {
+      "id": "hair-spiked-liberty2",
+      "category": "hair",
+      "label": "spiked liberty2",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-spiked-liberty2-male.png",
+        "female": "/assets/lpc/catalog/hair-spiked-liberty2-female.png"
+      }
+    },
+    {
+      "id": "hair-spiked-porcupine",
+      "category": "hair",
+      "label": "spiked porcupine",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-spiked-porcupine-male.png",
+        "female": "/assets/lpc/catalog/hair-spiked-porcupine-female.png"
+      }
+    },
+    {
+      "id": "hair-spiked2",
+      "category": "hair",
+      "label": "spiked2",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-spiked2-male.png",
+        "female": "/assets/lpc/catalog/hair-spiked2-female.png"
+      }
+    },
+    {
+      "id": "hair-swoop",
+      "category": "hair",
+      "label": "swoop",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-swoop-male.png",
+        "female": "/assets/lpc/catalog/hair-swoop-female.png"
+      }
+    },
+    {
+      "id": "hair-twists-fade",
+      "category": "hair",
+      "label": "twists fade",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-twists-fade-male.png",
+        "female": "/assets/lpc/catalog/hair-twists-fade-female.png"
+      }
+    },
+    {
+      "id": "hair-twists-straight",
+      "category": "hair",
+      "label": "twists straight",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-twists-straight-male.png",
+        "female": "/assets/lpc/catalog/hair-twists-straight-female.png"
+      }
+    },
+    {
+      "id": "hair-unkempt",
+      "category": "hair",
+      "label": "unkempt",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-unkempt-male.png",
+        "female": "/assets/lpc/catalog/hair-unkempt-female.png"
+      }
+    },
+    {
+      "id": "hair-wavy",
+      "category": "hair",
+      "label": "wavy",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-wavy-male.png",
+        "female": "/assets/lpc/catalog/hair-wavy-female.png"
+      }
+    },
+    {
+      "id": "hair-xlong",
+      "category": "hair",
+      "label": "xlong",
+      "images": {
+        "male": "/assets/lpc/catalog/hair-xlong-male.png",
+        "female": "/assets/lpc/catalog/hair-xlong-female.png"
+      }
+    },
+    {
+      "id": "hat-cloth-cap-leather",
+      "category": "hat",
+      "label": "cap_leather",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-cloth-cap-leather-male.png",
+        "female": "/assets/lpc/catalog/hat-cloth-cap-leather-female.png"
+      }
+    },
+    {
+      "id": "hat-cloth",
+      "category": "hat",
+      "label": "cloth",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-cloth-male.png",
+        "female": "/assets/lpc/catalog/hat-cloth-female.png"
+      }
+    },
+    {
+      "id": "hat-elf",
+      "category": "hat",
+      "label": "elf",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-elf-male.png",
+        "female": "/assets/lpc/catalog/hat-elf-female.png"
+      }
+    },
+    {
+      "id": "hat-head-band-tied",
+      "category": "hat",
+      "label": "head band tied",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-head-band-tied-male.png",
+        "female": "/assets/lpc/catalog/hat-head-band-tied-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-armet",
+      "category": "hat",
+      "label": "helmet / armet",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-armet-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-armet-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-armet-simple",
+      "category": "hat",
+      "label": "helmet / armet simple",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-armet-simple-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-armet-simple-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-barbarian",
+      "category": "hat",
+      "label": "helmet / barbarian",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-barbarian-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-barbarian-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-barbarian-nasal",
+      "category": "hat",
+      "label": "helmet / barbarian nasal",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-barbarian-nasal-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-barbarian-nasal-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-barbarian-viking",
+      "category": "hat",
+      "label": "helmet / barbarian viking",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-barbarian-viking-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-barbarian-viking-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-barbuta",
+      "category": "hat",
+      "label": "helmet / barbuta",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-barbuta-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-barbuta-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-barbuta-simple",
+      "category": "hat",
+      "label": "helmet / barbuta simple",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-barbuta-simple-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-barbuta-simple-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-bascinet",
+      "category": "hat",
+      "label": "helmet / bascinet",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-bascinet-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-bascinet-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-bascinet-pigface",
+      "category": "hat",
+      "label": "helmet / bascinet pigface",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-bascinet-pigface-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-bascinet-pigface-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-bascinet-pigface-raised",
+      "category": "hat",
+      "label": "helmet / bascinet pigface raised",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-bascinet-pigface-raised-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-bascinet-pigface-raised-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-bascinet-round",
+      "category": "hat",
+      "label": "helmet / bascinet round",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-bascinet-round-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-bascinet-round-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-bascinet-round-raised",
+      "category": "hat",
+      "label": "helmet / bascinet round raised",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-bascinet-round-raised-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-bascinet-round-raised-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-close",
+      "category": "hat",
+      "label": "helmet / close",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-close-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-close-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-flattop",
+      "category": "hat",
+      "label": "helmet / flattop",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-flattop-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-flattop-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-greathelm",
+      "category": "hat",
+      "label": "helmet / greathelm",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-greathelm-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-greathelm-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-horned",
+      "category": "hat",
+      "label": "helmet / horned",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-horned-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-horned-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-kettle",
+      "category": "hat",
+      "label": "helmet / kettle",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-kettle-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-kettle-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-legion",
+      "category": "hat",
+      "label": "helmet / legion",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-legion-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-legion-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-mail",
+      "category": "hat",
+      "label": "helmet / mail",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-mail-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-mail-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-maximus",
+      "category": "hat",
+      "label": "helmet / maximus",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-maximus-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-maximus-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-morion",
+      "category": "hat",
+      "label": "helmet / morion",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-morion-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-morion-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-nasal",
+      "category": "hat",
+      "label": "helmet / nasal",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-nasal-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-nasal-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-norman",
+      "category": "hat",
+      "label": "helmet / norman",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-norman-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-norman-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-pointed",
+      "category": "hat",
+      "label": "helmet / pointed",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-pointed-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-pointed-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-spangenhelm",
+      "category": "hat",
+      "label": "helmet / spangenhelm",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-spangenhelm-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-spangenhelm-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-spangenhelm-viking",
+      "category": "hat",
+      "label": "helmet / spangenhelm viking",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-spangenhelm-viking-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-spangenhelm-viking-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-sugarloaf",
+      "category": "hat",
+      "label": "helmet / sugarloaf",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-sugarloaf-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-sugarloaf-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-sugarloaf-simple",
+      "category": "hat",
+      "label": "helmet / sugarloaf simple",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-sugarloaf-simple-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-sugarloaf-simple-female.png"
+      }
+    },
+    {
+      "id": "hat-helmet-xeon",
+      "category": "hat",
+      "label": "helmet / xeon",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-helmet-xeon-male.png",
+        "female": "/assets/lpc/catalog/hat-helmet-xeon-female.png"
+      }
+    },
+    {
+      "id": "hat-cloth-hijab",
+      "category": "hat",
+      "label": "hijab",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-cloth-hijab-male.png",
+        "female": "/assets/lpc/catalog/hat-cloth-hijab-female.png"
+      }
+    },
+    {
+      "id": "hat-cloth-hood",
+      "category": "hat",
+      "label": "hood",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-cloth-hood-male.png",
+        "female": "/assets/lpc/catalog/hat-cloth-hood-female.png"
+      }
+    },
+    {
+      "id": "hat-magic",
+      "category": "hat",
+      "label": "magic",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-magic-male.png",
+        "female": "/assets/lpc/catalog/hat-magic-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-bandana",
+      "category": "hat",
+      "label": "pirate / bandana",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-bandana-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-bandana-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-bandana-skull",
+      "category": "hat",
+      "label": "pirate / bandana skull",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-bandana-skull-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-bandana-skull-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-bicorne-athwart",
+      "category": "hat",
+      "label": "pirate / bicorne athwart",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-bicorne-athwart-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-bicorne-athwart-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-bicorne-athwart-admiral",
+      "category": "hat",
+      "label": "pirate / bicorne athwart admiral",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-bicorne-athwart-admiral-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-bicorne-athwart-admiral-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-bicorne-athwart-admiral-cockade",
+      "category": "hat",
+      "label": "pirate / bicorne athwart admiral cockade",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-bicorne-athwart-admiral-cockade-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-bicorne-athwart-admiral-cockade-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-bicorne-athwart-commodore",
+      "category": "hat",
+      "label": "pirate / bicorne athwart commodore",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-bicorne-athwart-commodore-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-bicorne-athwart-commodore-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-bicorne-athwart-pirate",
+      "category": "hat",
+      "label": "pirate / bicorne athwart pirate",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-bicorne-athwart-pirate-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-bicorne-athwart-pirate-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-bicorne-foreaft",
+      "category": "hat",
+      "label": "pirate / bicorne foreaft",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-bicorne-foreaft-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-bicorne-foreaft-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-bicorne-foreaft-commodore",
+      "category": "hat",
+      "label": "pirate / bicorne foreaft commodore",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-bicorne-foreaft-commodore-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-bicorne-foreaft-commodore-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-bonnie",
+      "category": "hat",
+      "label": "pirate / bonnie",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-bonnie-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-bonnie-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-bonnie-feather",
+      "category": "hat",
+      "label": "pirate / bonnie feather",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-bonnie-feather-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-bonnie-feather-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-cavalier",
+      "category": "hat",
+      "label": "pirate / cavalier",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-cavalier-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-cavalier-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-cavalier-feather",
+      "category": "hat",
+      "label": "pirate / cavalier feather",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-cavalier-feather-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-cavalier-feather-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-kerchief",
+      "category": "hat",
+      "label": "pirate / kerchief",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-kerchief-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-kerchief-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-tricorne",
+      "category": "hat",
+      "label": "pirate / tricorne",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-tricorne-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-tricorne-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-tricorne-captain",
+      "category": "hat",
+      "label": "pirate / tricorne captain",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-tricorne-captain-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-tricorne-captain-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-tricorne-captain-pirate",
+      "category": "hat",
+      "label": "pirate / tricorne captain pirate",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-tricorne-captain-pirate-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-tricorne-captain-pirate-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-tricorne-captain-pirate-skull",
+      "category": "hat",
+      "label": "pirate / tricorne captain pirate skull",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-tricorne-captain-pirate-skull-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-tricorne-captain-pirate-skull-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-tricorne-lieutenant",
+      "category": "hat",
+      "label": "pirate / tricorne lieutenant",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-tricorne-lieutenant-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-tricorne-lieutenant-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-tricorne-stitched",
+      "category": "hat",
+      "label": "pirate / tricorne stitched",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-tricorne-stitched-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-tricorne-stitched-female.png"
+      }
+    },
+    {
+      "id": "hat-pirate-tricorne-thatch",
+      "category": "hat",
+      "label": "pirate / tricorne thatch",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-pirate-tricorne-thatch-male.png",
+        "female": "/assets/lpc/catalog/hat-pirate-tricorne-thatch-female.png"
+      }
+    },
+    {
+      "id": "hat-reptile",
+      "category": "hat",
+      "label": "reptile",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-reptile-male.png",
+        "female": "/assets/lpc/catalog/hat-reptile-female.png"
+      }
+    },
+    {
+      "id": "hat-santa",
+      "category": "hat",
+      "label": "santa",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-santa-male.png",
+        "female": "/assets/lpc/catalog/hat-santa-female.png"
+      }
+    },
+    {
+      "id": "hat-tiara",
+      "category": "hat",
+      "label": "tiara",
+      "images": {
+        "female": "/assets/lpc/catalog/hat-tiara-female.png"
+      }
+    },
+    {
+      "id": "hat-visor-grated",
+      "category": "hat",
+      "label": "visor / grated",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-visor-grated-male.png",
+        "female": "/assets/lpc/catalog/hat-visor-grated-female.png"
+      }
+    },
+    {
+      "id": "hat-visor-grated-narrow",
+      "category": "hat",
+      "label": "visor / grated narrow",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-visor-grated-narrow-male.png",
+        "female": "/assets/lpc/catalog/hat-visor-grated-narrow-female.png"
+      }
+    },
+    {
+      "id": "hat-visor-horned",
+      "category": "hat",
+      "label": "visor / horned",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-visor-horned-male.png",
+        "female": "/assets/lpc/catalog/hat-visor-horned-female.png"
+      }
+    },
+    {
+      "id": "hat-visor-pigface",
+      "category": "hat",
+      "label": "visor / pigface",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-visor-pigface-male.png",
+        "female": "/assets/lpc/catalog/hat-visor-pigface-female.png"
+      }
+    },
+    {
+      "id": "hat-visor-pigface-raised",
+      "category": "hat",
+      "label": "visor / pigface raised",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-visor-pigface-raised-male.png",
+        "female": "/assets/lpc/catalog/hat-visor-pigface-raised-female.png"
+      }
+    },
+    {
+      "id": "hat-visor-round",
+      "category": "hat",
+      "label": "visor / round",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-visor-round-male.png",
+        "female": "/assets/lpc/catalog/hat-visor-round-female.png"
+      }
+    },
+    {
+      "id": "hat-visor-round-raised",
+      "category": "hat",
+      "label": "visor / round raised",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-visor-round-raised-male.png",
+        "female": "/assets/lpc/catalog/hat-visor-round-raised-female.png"
+      }
+    },
+    {
+      "id": "hat-visor-slit",
+      "category": "hat",
+      "label": "visor / slit",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-visor-slit-male.png",
+        "female": "/assets/lpc/catalog/hat-visor-slit-female.png"
+      }
+    },
+    {
+      "id": "hat-visor-slit-narrow",
+      "category": "hat",
+      "label": "visor / slit narrow",
+      "images": {
+        "male": "/assets/lpc/catalog/hat-visor-slit-narrow-male.png",
+        "female": "/assets/lpc/catalog/hat-visor-slit-narrow-female.png"
+      }
+    },
+    {
+      "id": "feet-armour-plate",
+      "category": "shoes",
+      "label": "armour / plate",
+      "images": {
+        "male": "/assets/lpc/catalog/feet-armour-plate-male.png",
+        "female": "/assets/lpc/catalog/feet-armour-plate-female.png"
+      }
+    },
+    {
+      "id": "feet-boots",
+      "category": "shoes",
+      "label": "boots",
+      "images": {
+        "male": "/assets/lpc/catalog/feet-boots-male.png",
+        "female": "/assets/lpc/catalog/feet-boots-female.png"
+      }
+    },
+    {
+      "id": "feet-ghillies",
+      "category": "shoes",
+      "label": "ghillies",
+      "images": {
+        "male": "/assets/lpc/catalog/feet-ghillies-male.png",
+        "female": "/assets/lpc/catalog/feet-ghillies-female.png"
+      }
+    },
+    {
+      "id": "feet-hoofs",
+      "category": "shoes",
+      "label": "hoofs",
+      "images": {
+        "male": "/assets/lpc/catalog/feet-hoofs-male.png",
+        "female": "/assets/lpc/catalog/feet-hoofs-female.png"
+      }
+    },
+    {
+      "id": "feet-sandals",
+      "category": "shoes",
+      "label": "sandals",
+      "images": {
+        "male": "/assets/lpc/catalog/feet-sandals-male.png",
+        "female": "/assets/lpc/catalog/feet-sandals-female.png"
+      }
+    },
+    {
+      "id": "feet-shoes",
+      "category": "shoes",
+      "label": "shoes",
+      "images": {
+        "male": "/assets/lpc/catalog/feet-shoes-male.png",
+        "female": "/assets/lpc/catalog/feet-shoes-female.png"
+      }
+    },
+    {
+      "id": "feet-slippers",
+      "category": "shoes",
+      "label": "slippers",
+      "images": {
+        "male": "/assets/lpc/catalog/feet-slippers-male.png",
+        "female": "/assets/lpc/catalog/feet-slippers-female.png"
+      }
+    },
+    {
+      "id": "torso-armour-leather",
+      "category": "top",
+      "label": "armour / leather",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-armour-leather-male.png",
+        "female": "/assets/lpc/catalog/torso-armour-leather-female.png"
+      }
+    },
+    {
+      "id": "torso-armour-legion",
+      "category": "top",
+      "label": "armour / legion",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-armour-legion-male.png",
+        "female": "/assets/lpc/catalog/torso-armour-legion-female.png"
+      }
+    },
+    {
+      "id": "torso-armour-plate",
+      "category": "top",
+      "label": "armour / plate",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-armour-plate-male.png",
+        "female": "/assets/lpc/catalog/torso-armour-plate-female.png"
+      }
+    },
+    {
+      "id": "torso-aprons-apron-white",
+      "category": "top",
+      "label": "Avental",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-aprons-apron-white-male.png",
+        "female": "/assets/lpc/catalog/torso-aprons-apron-white-female.png"
+      }
+    },
+    {
+      "id": "torso-aprons-apron-full-white",
+      "category": "top",
+      "label": "Avental inteiro",
+      "images": {
+        "female": "/assets/lpc/catalog/torso-aprons-apron-full-white-female.png"
+      }
+    },
+    {
+      "id": "dress-bodice",
+      "category": "top",
+      "label": "bodice",
+      "images": {
+        "female": "/assets/lpc/catalog/dress-bodice-female.png"
+      }
+    },
+    {
+      "id": "torso-chainmail-gray",
+      "category": "top",
+      "label": "Camisa de malha metálica",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-chainmail-gray-male.png",
+        "female": "/assets/lpc/catalog/torso-chainmail-gray-female.png"
+      }
+    },
+    {
+      "id": "torso-clothes-longsleeve-formal",
+      "category": "top",
+      "label": "Camisa social",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-clothes-longsleeve-formal-male.png"
+      }
+    },
+    {
+      "id": "torso-clothes-longsleeve-formal-striped",
+      "category": "top",
+      "label": "Camisa social listrada",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-clothes-longsleeve-formal-striped-male.png"
+      }
+    },
+    {
+      "id": "torso-jacket-collared-white",
+      "category": "top",
+      "label": "Casaco com gola",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-jacket-collared-white-male.png"
+      }
+    },
+    {
+      "id": "torso-jacket-collared-brown-striped",
+      "category": "top",
+      "label": "Casaco com gola listrado",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-jacket-collared-brown-striped-male.png"
+      }
+    },
+    {
+      "id": "torso-jacket-santa-white",
+      "category": "top",
+      "label": "Casaco de Papai Noel",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-jacket-santa-white-male.png"
+      }
+    },
+    {
+      "id": "torso-clothes-blouse",
+      "category": "top",
+      "label": "clothes / blouse",
+      "images": {
+        "female": "/assets/lpc/catalog/torso-clothes-blouse-female.png"
+      }
+    },
+    {
+      "id": "torso-clothes-blouse-longsleeve",
+      "category": "top",
+      "label": "clothes / blouse longsleeve",
+      "images": {
+        "female": "/assets/lpc/catalog/torso-clothes-blouse-longsleeve-female.png"
+      }
+    },
+    {
+      "id": "torso-clothes-corset",
+      "category": "top",
+      "label": "clothes / corset",
+      "images": {
+        "female": "/assets/lpc/catalog/torso-clothes-corset-female.png"
+      }
+    },
+    {
+      "id": "torso-clothes-longsleeve",
+      "category": "top",
+      "label": "clothes / longsleeve",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-clothes-longsleeve-male.png",
+        "female": "/assets/lpc/catalog/torso-clothes-longsleeve-female.png"
+      }
+    },
+    {
+      "id": "torso-clothes-longsleeve-laced",
+      "category": "top",
+      "label": "clothes / longsleeve laced",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-clothes-longsleeve-laced-male.png"
+      }
+    },
+    {
+      "id": "torso-clothes-robe",
+      "category": "top",
+      "label": "clothes / robe",
+      "images": {
+        "female": "/assets/lpc/catalog/torso-clothes-robe-female.png"
+      }
+    },
+    {
+      "id": "torso-clothes-scoop-shirt",
+      "category": "top",
+      "label": "clothes / scoop shirt",
+      "images": {
+        "female": "/assets/lpc/catalog/torso-clothes-scoop-shirt-female.png"
+      }
+    },
+    {
+      "id": "torso-clothes-shortsleeve",
+      "category": "top",
+      "label": "clothes / shortsleeve",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-clothes-shortsleeve-male.png",
+        "female": "/assets/lpc/catalog/torso-clothes-shortsleeve-female.png"
+      }
+    },
+    {
+      "id": "torso-clothes-sleeveless",
+      "category": "top",
+      "label": "clothes / sleeveless",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-clothes-sleeveless-male.png",
+        "female": "/assets/lpc/catalog/torso-clothes-sleeveless-female.png"
+      }
+    },
+    {
+      "id": "torso-clothes-sleeveless-laced",
+      "category": "top",
+      "label": "clothes / sleeveless laced",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-clothes-sleeveless-laced-male.png"
+      }
+    },
+    {
+      "id": "torso-clothes-sleeveless-striped",
+      "category": "top",
+      "label": "clothes / sleeveless striped",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-clothes-sleeveless-striped-male.png"
+      }
+    },
+    {
+      "id": "torso-clothes-tanktop",
+      "category": "top",
+      "label": "clothes / tanktop",
+      "images": {
+        "female": "/assets/lpc/catalog/torso-clothes-tanktop-female.png"
+      }
+    },
+    {
+      "id": "torso-clothes-tunic",
+      "category": "top",
+      "label": "clothes / tunic",
+      "images": {
+        "female": "/assets/lpc/catalog/torso-clothes-tunic-female.png"
+      }
+    },
+    {
+      "id": "torso-clothes-vest",
+      "category": "top",
+      "label": "clothes / vest",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-clothes-vest-male.png"
+      }
+    },
+    {
+      "id": "torso-clothes-vest-open",
+      "category": "top",
+      "label": "clothes / vest open",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-clothes-vest-open-male.png"
+      }
+    },
+    {
+      "id": "torso-clothes-vest-gray-striped",
+      "category": "top",
+      "label": "Colete listrado",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-clothes-vest-gray-striped-male.png"
+      }
+    },
+    {
+      "id": "torso-bandage-white",
+      "category": "top",
+      "label": "Faixas de tecido",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-bandage-white-male.png",
+        "female": "/assets/lpc/catalog/torso-bandage-white-female.png"
+      }
+    },
+    {
+      "id": "torso-aprons-overalls-white",
+      "category": "top",
+      "label": "Jardineira",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-aprons-overalls-white-male.png",
+        "female": "/assets/lpc/catalog/torso-aprons-overalls-white-female.png"
+      }
+    },
+    {
+      "id": "dress-sash",
+      "category": "top",
+      "label": "sash",
+      "images": {
+        "female": "/assets/lpc/catalog/dress-sash-female.png"
+      }
+    },
+    {
+      "id": "dress-slit",
+      "category": "top",
+      "label": "slit",
+      "images": {
+        "female": "/assets/lpc/catalog/dress-slit-female.png"
+      }
+    },
+    {
+      "id": "torso-jacket-frock-white",
+      "category": "top",
+      "label": "Sobrecasaca",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-jacket-frock-white-male.png"
+      }
+    },
+    {
+      "id": "torso-jacket-trench-gray",
+      "category": "top",
+      "label": "Sobretudo",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-jacket-trench-gray-male.png"
+      }
+    },
+    {
+      "id": "torso-jacket-tabard-white",
+      "category": "top",
+      "label": "Tabardo",
+      "images": {
+        "male": "/assets/lpc/catalog/torso-jacket-tabard-white-male.png",
+        "female": "/assets/lpc/catalog/torso-jacket-tabard-white-female.png"
+      }
+    }
+  ]
+}

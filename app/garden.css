@@ -1,0 +1,33 @@
+/* Cena LPC: o mapa usa coordenadas nativas de 960 × 864 pixels. */
+.game-panel { position:relative; min-width:0; border:1px solid #b5c1a1; border-radius:14px; overflow:hidden; background:#263f2f; box-shadow:0 12px 35px #203a2717; }
+.game-toolbar { position:absolute; z-index:6; top:12px; left:12px; display:flex; justify-content:space-between; align-items:center; gap:12px; padding:0; color:#fff4d9; font-family:Georgia,serif; pointer-events:none; }
+.game-toolbar .map-controls { pointer-events:auto; }
+.game-toolbar span { display:flex; align-items:center; flex-wrap:wrap; gap:8px; }
+.game-toolbar small { color:#c0ceaf; font:12px Arial,sans-serif; margin-left:5px; }
+.game-toolbar i { width:9px; height:9px; background:#d8bf75; transform:rotate(45deg); }
+.game-toolbar button { border:1px solid #718169; background:#3a5340; color:#f7efd9; padding:7px 10px; border-radius:5px; font:12px Arial,sans-serif; }
+.game-viewport { overflow:auto; background:#2d7c30; }
+.game-map { display:block; width:100%; height:auto; image-rendering:pixelated; }
+.game-viewport.zoomed .game-map { width:1200px; max-width:none; }
+.map-eyebrow { font:9px Arial,sans-serif; letter-spacing:2px; fill:#6b6445; }
+.map-name { font:italic 25px Georgia,serif; fill:#425d3b; }
+.game-seat { cursor:pointer; outline:none; }
+.seat-halo { fill:#163a2520; stroke:transparent; stroke-width:2px; }
+.game-seat:hover .seat-halo,.game-seat:focus-visible .seat-halo { fill:#fff0b366; stroke:#fff6c5; }
+.game-seat.is-selected .seat-halo { fill:#ffe7a380; stroke:#ffefb1; stroke-width:3px; }
+.game-seat:focus-visible .seat-hit { stroke:#fff4b5; stroke-width:2px; }
+.game-seat .lpc-avatar { display:block; width:64px; height:64px; pointer-events:none; }
+.map-seat-number { fill:#f7edcf; stroke:#315330; stroke-width:3px; paint-order:stroke; font:11px monospace; pointer-events:none; }
+.game-seat.is-occupied .map-seat-number { fill:#f4d895; }
+.game-legend { display:flex; justify-content:space-between; gap:16px; padding:12px 16px; background:#e8ebdd; color:#526349; font-size:12px; }
+.game-legend a { white-space:nowrap; }
+.fireflies circle { fill:#ffefaa; animation:firefly 4s ease-in-out infinite; }
+@keyframes firefly { 0%,100% {opacity:.2; transform:translateY(0)} 50% {opacity:1;transform:translateY(-7px)} }
+.avatar-editor>.lpc-avatar { background:radial-gradient(ellipse at 50% 82%,#b9c7a7 0 12%,transparent 13%),linear-gradient(#e8edde,#f8f6ea); border-radius:8px; image-rendering:pixelated; height:192px; }
+.dialog .lpc-avatar { width:128px; height:128px; }
+.family .game-panel { width:100%; max-width:none; }
+.credits { max-width:800px; padding:45px 0; }
+.credits li { margin:12px 0; }
+.credits pre { white-space:pre-wrap; overflow-wrap:anywhere; background:#eeeee3; padding:20px; font-size:12px; }
+@media(max-width:700px) { .game-toolbar{padding:12px;font-size:14px}.game-toolbar small{display:none}.game-legend{font-size:11px;flex-direction:column;gap:5px}.game-map{min-width:640px}.game-viewport{max-height:76vh}.avatar-editor>.lpc-avatar{height:150px} }
+@media(prefers-reduced-motion:reduce) { .fireflies circle{animation:none;opacity:.7} }

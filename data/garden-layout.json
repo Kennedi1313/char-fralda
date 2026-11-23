@@ -1,0 +1,5 @@
+{
+  "width": 1536,
+  "height": 960,
+  "seats": { "x": 456, "y": 360, "columns": 8, "rows": 6, "spacingX": 66, "spacingY": 74, "aisle": 128 }
+}

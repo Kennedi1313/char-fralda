@@ -1,0 +1,10 @@
+.mimos-accordion { margin: 28px 0; border: 1px solid #cad4bc; border-radius: 12px; background: #f0f3e7; overflow: hidden; }
+.mimos-accordion>summary { cursor: pointer; padding: 23px; color: #456343; font-weight: 600; font-size: 17px; }
+.mimos-accordion[open]>summary { border-bottom: 1px solid #d7dfcd; }
+.mimos-accordion>fieldset { margin: 0; padding: 24px; }
+.mimos-accordion legend { padding-top: 20px; }
+.mimos-accordion .custom-gift-option { display: flex; align-items: center; gap: 12px; border: 1px dashed #a7b798; border-radius: 8px; padding: 18px; background: #fffdf7; }
+.mimos-accordion .custom-gift-option input { margin: 0; width: 18px; height: 18px; accent-color: #52694f; }
+.dialog>.turn-controls { margin: 10px 0 20px; }
+.dialog>.lpc-avatar { width: 160px; height: 160px; margin: auto; }
+@media(max-width:700px) { .mimos-accordion>fieldset { padding: 14px; }.mimos-accordion>summary { padding: 20px 16px; font-size: 15px; } }

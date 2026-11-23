@@ -1,0 +1,15 @@
+.game-toolbar .map-controls { gap: 10px; flex-wrap: wrap; }
+.zoom-control { display: flex; align-items: center; padding: 4px; gap: 5px; background: #fff7df; border: 2px solid #b5c69b; border-radius: 12px; box-shadow: 0 3px 0 #1f3b2c22; }
+.game-toolbar .zoom-control button { width: 42px; height: 40px; padding: 0; border: 0; border-radius: 8px; background: #3f6047; color: white; font: 700 26px/1 system-ui; }
+.game-toolbar .zoom-control button:disabled { opacity: .4; }
+.zoom-control output { min-width: 46px; text-align: center; font: 700 13px system-ui; color: #3f6047; }
+.game-toolbar .map-controls>button { min-height: 38px; padding: 8px 12px; border: 1px solid #a9bb9a; background: #f4f5e9; color: #3f6047; border-radius: 8px; }
+@media (max-width: 700px) {
+  .game-immersive .game-toolbar { align-items: center; gap: 7px; }
+  .game-toolbar>span small { display: block; }
+  .game-toolbar .map-controls { justify-content: flex-end; gap: 5px; }
+  .game-toolbar .map-controls>button { font-size: 11px; padding: 6px 8px; min-height: 32px; }
+  .game-toolbar .zoom-control button { width: 34px; height: 34px; font-size: 24px; }
+  .zoom-control { gap: 2px; padding: 3px; }
+  .zoom-control output { min-width: 38px; font-size: 11px; }
+}
