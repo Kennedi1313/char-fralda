@@ -16,8 +16,8 @@ import { ParticipationForm, Registration } from "./ParticipationForm";
 
 type Receipt = { id: string; token: string; name: string };
 type Stage = "form" | "invitation" | "character" | "garden";
-export function ParticipationFlow({ onClose }: { onClose: () => void }) {
-  const [stage, setStage] = useState<Stage>("form");
+export function ParticipationFlow({ onClose, startInGarden = false }: { onClose: () => void; startInGarden?: boolean }) {
+  const [stage, setStage] = useState<Stage>(startInGarden ? "garden" : "form");
   const [receipt, setReceipt] = useState<Receipt | null>(null);
   const [counts, setCounts] = useState<Record<string, number>>({});
   const [guests, setGuests] = useState<Participation[]>([]);
@@ -34,7 +34,7 @@ export function ParticipationFlow({ onClose }: { onClose: () => void }) {
       const saved = DEMO_MODE ? null : localStorage.getItem(RECEIPT_KEY);
       if (saved) {
         setReceipt(JSON.parse(saved));
-        setStage("invitation");
+        if (!startInGarden) setStage("invitation");
       }
       const savedAvatar = localStorage.getItem(AVATAR_KEY);
       if (savedAvatar) {
@@ -43,6 +43,7 @@ export function ParticipationFlow({ onClose }: { onClose: () => void }) {
       }
       const savedSeat = localStorage.getItem(SEAT_KEY);
       if (savedSeat) { setSeat(Number(savedSeat)); setSeated(true); }
+      if (startInGarden) refreshGarden().catch((e) => setError(e.message));
     } catch {}
     api<Record<string, number>>("/api/availability")
       .then(setCounts)

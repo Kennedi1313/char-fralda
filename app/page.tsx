@@ -28,7 +28,10 @@ export default function Home() {
           <a href="/jardim">Entrar no jardim</a>
         </nav>
         {started ? (
-          <ParticipationFlow onClose={() => setStarted(false)} />
+          <ParticipationFlow
+            onClose={() => setStarted(false)}
+            startInGarden={returningGuest}
+          />
         ) : (
           <section className="invitation">
             <div className="botanical botanical-left">❧</div>
@@ -103,8 +106,7 @@ export default function Home() {
                   className="primary"
                   tabIndex={open ? 0 : -1}
                   onClick={() => {
-                    if (returningGuest) setStarted(true);
-                    else setStarted(true);
+                    setStarted(true);
                   }}
                 >
                   {returningGuest ? "Ir para o jardim" : "Quero participar"}
