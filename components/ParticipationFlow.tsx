@@ -175,7 +175,15 @@ export function ParticipationFlow({ onClose }: { onClose: () => void }) {
               </small>
             </div>
           </div>
-          {!seated && (
+          {seated ? (
+            <button
+              className="secondary"
+              disabled={busy}
+              onClick={() => setSeated(false)}
+            >
+              Mudar de cadeira
+            </button>
+          ) : (
             <button
               className="primary"
               disabled={!seat || busy}

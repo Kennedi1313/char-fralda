@@ -103,7 +103,7 @@ export default function Home() {
                   className="primary"
                   tabIndex={open ? 0 : -1}
                   onClick={() => {
-                    if (returningGuest) window.location.href = "/jardim";
+                    if (returningGuest) setStarted(true);
                     else setStarted(true);
                   }}
                 >
