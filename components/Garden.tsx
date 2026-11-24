@@ -13,7 +13,7 @@ export function Garden({guests,onSeat,selected,previewAvatar,ownId,immersive=fal
   previewAvatar?:AvatarType;ownId?:string;immersive?:boolean;onRefresh?:()=>void;
 }) {
   const [zoom,setZoom]=useState(immersive?1.5:1);
-  const [maxZoom,setMaxZoom]=useState(1.5);
+  const [maxZoom,setMaxZoom]=useState(4);
   const [fit,setFit]=useState(0);
   const viewport=useRef<HTMLDivElement>(null);
   const drag=useRef<{x:number;y:number;left:number;top:number}|null>(null);
@@ -22,8 +22,7 @@ export function Garden({guests,onSeat,selected,previewAvatar,ownId,immersive=fal
   useEffect(()=>{
     const media=window.matchMedia('(max-width: 700px)');
     const update=()=>{
-      const nextMax=media.matches?4:1.5;
-      setMaxZoom(nextMax);
+      setMaxZoom(4);
       if (immersive) setZoom(media.matches?4:1.5);
     };
     update();
