@@ -51,8 +51,10 @@ export function ParticipationFlow({ onClose }: { onClose: () => void }) {
   useEffect(() => {
     window.scrollTo({ top: 0 });
   }, [stage]);
-  const refreshGarden = async () =>
-    setGuests(await api<Participation[]>("/api/participations"));
+  const refreshGarden = async () => {
+    const rows = await api<Participation[]>("/api/participations");
+    setGuests(Array.from(new Map(rows.map((person) => [person.id, person])).values()));
+  };
   async function submit(form: Registration) {
     setError("");
     setBusy(true);
@@ -97,6 +99,11 @@ export function ParticipationFlow({ onClose }: { onClose: () => void }) {
     setError("");
     try {
       await api("/api/seats", jsonRequest({ ...receipt, seat, avatar }));
+      setGuests((current) =>
+        current.map((person) =>
+          person.id === receipt?.id ? { ...person, seat: seat ?? null, avatar } : person,
+        ),
+      );
       setSeated(true);
       setShowSeatSuccess(true);
       try { localStorage.setItem(SEAT_KEY, String(seat)); } catch {}
