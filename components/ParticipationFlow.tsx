@@ -187,7 +187,14 @@ export function ParticipationFlow({ onClose, startInGarden = false }: { onClose:
             <button
               className="secondary"
               disabled={busy}
-              onClick={() => setSeated(false)}
+              onClick={() => {
+                setGuests((current) =>
+                  current.map((person) =>
+                    person.id === receipt?.id ? { ...person, seat: null } : person,
+                  ),
+                );
+                setSeated(false);
+              }}
             >
               Mudar de cadeira
             </button>
