@@ -158,6 +158,7 @@ export function ParticipationFlow({ onClose, startInGarden = false }: { onClose:
           immersive
           onRefresh={() => refreshGarden().catch((e) => setError(e.message))}
           onSeat={(number, person) => {
+            if (seated && !person) return;
             if (person && (person.id !== receipt?.id || seated)) setDetail(person);
             else {
               setSeat(number);
