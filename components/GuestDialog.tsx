@@ -1,17 +1,19 @@
 "use client";
-import { useState } from "react";
+
 import * as Dialog from "@radix-ui/react-dialog";
 import { Participation } from "../lib/types";
-import { Avatar } from "./Avatar";
-import { itemName } from "../data/items";
+import { AvatarTurntable } from "./AvatarTurntable";
+import { catalogName, type CatalogItem } from "../lib/catalog";
 export function GuestDialog({
   guest,
   close,
   family = false,
+  catalog=[],
 }: {
   guest: Participation | null;
   close: () => void;
   family?: boolean;
+  catalog?: CatalogItem[];
 }) {
   return (
     <Dialog.Root open={!!guest} onOpenChange={(open) => !open && close()}>
@@ -24,12 +26,12 @@ export function GuestDialog({
                 ×
               </Dialog.Close>
               {guest.avatar && (
-                <GuestAvatar key={guest.id} avatar={guest.avatar} />
+                <AvatarTurntable key={guest.id} value={guest.avatar} />
               )}
               <Dialog.Title>{guest.name}</Dialog.Title>
               {family && guest.relationship && (
                 <span className="relationship-badge">
-                  {guest.relationship} do Estevão
+                  {guest.relationship} do Estêvão
                 </span>
               )}
               <Dialog.Description>
@@ -37,7 +39,7 @@ export function GuestDialog({
               </Dialog.Description>
               {family && (
                 <p>
-                  {itemName(guest.diaper)} · {itemName(guest.gift)}
+                  {catalogName(catalog,guest.diaper)} · {catalogName(catalog,guest.gift)}
                   <br />
                   {guest.contact}
                 </p>
@@ -52,30 +54,5 @@ export function GuestDialog({
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
-  );
-}
-
-function GuestAvatar({
-  avatar,
-}: {
-  avatar: NonNullable<Participation["avatar"]>;
-}) {
-  const [direction, setDirection] = useState(0);
-  return (
-    <>
-      <Avatar value={avatar} direction={direction} />
-      <div className="turn-controls" role="group" aria-label="Girar personagem">
-        {["Frente", "Esquerda", "Direita", "Costas"].map((label, index) => (
-          <button
-            type="button"
-            key={label}
-            aria-pressed={direction === index}
-            onClick={() => setDirection(index)}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
-    </>
   );
 }

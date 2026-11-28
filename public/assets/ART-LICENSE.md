@@ -1,4 +1,4 @@
-# Arte LPC do jardim do Estevão
+# Arte LPC do jardim do Estêvão
 
 As composições garden/garden-map.png e garden/garden-wide.png são distribuídas sob CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0/
 

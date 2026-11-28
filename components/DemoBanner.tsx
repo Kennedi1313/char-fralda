@@ -1,17 +1,25 @@
 "use client";
-import { AVATAR_KEY, DEMO_KEY, DEMO_MODE, RECEIPT_KEY, SEAT_KEY } from "../lib/demo";
+import { useEffect } from "react";
+import { DEMO_MODE } from "../lib/demo";
 export function DemoBanner() {
+  useEffect(() => {
+    // Retire receipts and cached profiles left by releases before server sessions.
+    for (const storageName of ["localStorage","sessionStorage"] as const) {
+      try {
+        for (const prefix of ["estevao-", "estevao-demo-"])
+          for (const field of ["receipt","avatar","seat"])
+            window[storageName].removeItem(prefix+field);
+        window[storageName].removeItem("estevao-demo-guests-v1");
+      } catch { /* Storage may be disabled. */ }
+    }
+  }, []);
   if (!DEMO_MODE) return null;
   return (
     <div className="demo-banner">
-      <span>Demonstração · atualize a página para recomeçar, sem salvar estado</span>
+      <span>Demonstração · dados temporários de exemplo</span>
       <a href="/familia">Ver todas as presenças</a>
       <button
         onClick={() => {
-          localStorage.removeItem(DEMO_KEY);
-          localStorage.removeItem(RECEIPT_KEY);
-          localStorage.removeItem(AVATAR_KEY);
-          localStorage.removeItem(SEAT_KEY);
           window.location.assign("/");
         }}
       >

@@ -2,12 +2,16 @@
 import { FormEvent, useState } from "react";
 import { api, jsonRequest } from "../../lib/client";
 import { Participation } from "../../lib/types";
-import { Garden } from "../../components/Garden";
 import { GuestDialog } from "../../components/GuestDialog";
-import { itemName } from "../../data/items";
+import { catalogName, type CatalogItem } from "../../lib/catalog";
+import { CatalogEditor } from "../../components/CatalogEditor";
 import { DEMO_MODE } from "../../lib/demo";
 import { Trash2 } from "lucide-react";
 export default function Family() {
+  const [tab, setTab] = useState<"catalog" | "guests">("catalog");
+  const [items, setItems] = useState<CatalogItem[]>([]);
+  const reloadCatalog = async () =>
+    setItems(await api<CatalogItem[]>("/api/catalog"));
   const [password, setPassword] = useState(DEMO_MODE ? "demo" : "");
   const [guests, setGuests] = useState<Participation[] | null>(null);
   const [guest, setGuest] = useState<Participation | null>(null);
@@ -18,6 +22,7 @@ export default function Family() {
     setBusy(true);
     setError("");
     try {
+      await reloadCatalog();
       setGuests(
         await api<Participation[]>("/api/participations?family=1", {
           headers: { Authorization: `Bearer ${password}` },
@@ -34,22 +39,31 @@ export default function Family() {
     setBusy(true);
     setError("");
     try {
-      await api("/api/participations", { ...jsonRequest({ id: person.id }), method: "DELETE", headers: { Authorization: `Bearer ${password}`, "Content-Type": "application/json" } });
-      setGuests((current) => current?.filter((item) => item.id !== person.id) ?? null);
+      await api("/api/participations", {
+        ...jsonRequest({ id: person.id }),
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${password}`,
+          "Content-Type": "application/json",
+        },
+      });
+      setGuests(
+        (current) => current?.filter((item) => item.id !== person.id) ?? null,
+      );
       if (guest?.id === person.id) setGuest(null);
-    } catch (e) { setError((e as Error).message); } finally { setBusy(false); }
+      await reloadCatalog();
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setBusy(false);
+    }
   }
   return (
     <main className="shell family">
       <a href="/" className="brand">
-        ✿ jardim do estevão
+        ✿ jardim do Estêvão
       </a>
-      <p className="eyebrow">SÓ PARA A FAMÍLIA</p>
-      <h1>
-        Todos os carinhos,
-        <br />
-        em um só lugar.
-      </h1>
+      <h1>Painel da família</h1>
       {error && (
         <p className="notice" role="alert">
           {error}
@@ -78,7 +92,11 @@ export default function Family() {
             {guests.filter((g) => g.seat).length} cadeiras ocupadas
           </p>
           <div className="family-actions">
-            <button className="secondary" disabled={busy} onClick={() => load()}>
+            <button
+              className="secondary"
+              disabled={busy}
+              onClick={() => load()}
+            >
               Atualizar
             </button>
             <button
@@ -91,32 +109,87 @@ export default function Family() {
               Sair
             </button>
           </div>
-          <h2>Lista de participações</h2>
-          <p>
-            Todos aparecem aqui, inclusive quem preferiu não entrar no jardim.
-          </p>
-          <div className="guest-list">
-            {guests.map((person) => (
-              <article className="guest-card" key={person.id}>
-                <button className="guest-card-main" onClick={() => setGuest(person)}>
-                  <strong>{person.name}</strong>
-                  {person.relationship && <span>{person.relationship}</span>}
-                  <span>{itemName(person.diaper)} · {itemName(person.gift)}</span>
-                  <small>{person.seat ? `Cadeira ${person.seat}` : "Sem cadeira"}</small>
-                </button>
-                <button className="delete-guest" aria-label={`Apagar ${person.name}`} title="Apagar participação" disabled={busy} onClick={() => remove(person)}>
-                  <Trash2 aria-hidden="true" size={17} strokeWidth={1.8} />
-                </button>
-              </article>
-            ))}
-            {!guests.length && <p>Os primeiros carinhos vão aparecer aqui.</p>}
-          </div>
-          <h2>O jardim do Estevão</h2>
-          <Garden
-            guests={guests}
-            onSeat={(_, person) => person && setGuest(person)}
+          <nav className="panel-tabs" aria-label="Seções da família">
+            <button
+              aria-pressed={tab === "catalog"}
+              onClick={() => setTab("catalog")}
+            >
+              Lista de presentes
+            </button>
+            <button
+              aria-pressed={tab === "guests"}
+              onClick={() => setTab("guests")}
+            >
+              Convidados ({guests.length})
+            </button>
+          </nav>
+          {tab === "catalog" ? (
+            <CatalogEditor
+              items={items}
+              password={password}
+              reload={reloadCatalog}
+            />
+          ) : (
+            <>
+              <h2>Lista de participações</h2>
+              <p>
+                Todos aparecem aqui, inclusive quem preferiu não entrar no
+                jardim.
+              </p>
+              <div className="guest-list">
+                {guests.map((person) => (
+                  <article className="guest-card" key={person.id}>
+                    <button
+                      className="guest-card-main"
+                      onClick={() => setGuest(person)}
+                    >
+                      <strong>{person.name}</strong>
+                      {person.relationship && (
+                        <span>{person.relationship}</span>
+                      )}
+                      <span>
+                        {person.diaper
+                          ? [
+                              catalogName(items, person.diaper),
+                              catalogName(items, person.gift),
+                            ].join(" · ")
+                          : "Acompanhante" +
+                            (person.sponsorId
+                              ? " de " +
+                                (guests.find((g) => g.id === person.sponsorId)
+                                  ?.name ?? "familiar")
+                              : "")}
+                      </span>
+                      <small>
+                        {person.seat ? `Cadeira ${person.seat}` : "Sem cadeira"}
+                      </small>
+                    </button>
+                    <button
+                      className="delete-guest"
+                      aria-label={`Apagar ${person.name}`}
+                      title="Apagar participação"
+                      disabled={busy}
+                      onClick={() => remove(person)}
+                    >
+                      <Trash2 aria-hidden="true" size={17} strokeWidth={1.8} />
+                    </button>
+                  </article>
+                ))}
+                {!guests.length && (
+                  <p>Os primeiros carinhos vão aparecer aqui.</p>
+                )}
+              </div>
+            </>
+          )}
+          <a className="account-back" href="/jardim">
+            Visitar o jardim
+          </a>
+          <GuestDialog
+            guest={guest}
+            catalog={items}
+            close={() => setGuest(null)}
+            family
           />
-          <GuestDialog guest={guest} close={() => setGuest(null)} family />
         </>
       )}
     </main>

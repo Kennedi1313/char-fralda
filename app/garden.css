@@ -31,3 +31,16 @@
 .credits pre { white-space:pre-wrap; overflow-wrap:anywhere; background:#eeeee3; padding:20px; font-size:12px; }
 @media(max-width:700px) { .game-toolbar{padding:12px;font-size:14px}.game-toolbar small{display:none}.game-legend{font-size:11px;flex-direction:column;gap:5px}.game-map{min-width:640px}.game-viewport{max-height:76vh}.avatar-editor>.lpc-avatar{height:150px} }
 @media(prefers-reduced-motion:reduce) { .fireflies circle{animation:none;opacity:.7} }
+
+/* Keep the map mounted while guest positions arrive. */
+.garden-map-region { position:relative; isolation:isolate; flex:1; min-height:0; display:flex; flex-direction:column; }
+.garden-loading { position:absolute; inset:0; z-index:1; display:grid; place-items:center; padding:16px; background:rgb(32 54 41 / 16%); }
+.garden-loading-pill,.garden-loading-card { background:#fffbee; color:#304d37; border:1px solid #c4cbb4; box-shadow:0 4px 18px #223b292b; }
+.garden-loading-pill { display:flex; align-items:center; gap:10px; border-radius:32px; padding:12px 20px; font:600 15px/1.4 system-ui,sans-serif; }
+.garden-loading-pill svg { color:#7c8154; }
+.garden-loading-card { border-radius:15px; padding:18px 24px; text-align:center; }
+.garden-loading-card p { margin:0 0 12px; }
+@media(prefers-reduced-motion:no-preference) {
+  .garden-loading-pill svg { animation:garden-bloom 1.4s ease-in-out infinite alternate; }
+  @keyframes garden-bloom { from { transform:rotate(-10deg); opacity:.65; } to { transform:rotate(10deg); opacity:1; } }
+}

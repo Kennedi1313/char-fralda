@@ -118,7 +118,7 @@ export const gifts: GiftItem[] = [
     unit: "1 livro",
     details: [
       "Exemplo: livro de pano ou cartonado.",
-      "Pode deixar uma dedicatória para o Estevão.",
+      "Pode deixar uma dedicatória para o Estêvão.",
     ],
     category: "book",
   },

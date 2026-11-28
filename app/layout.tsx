@@ -6,7 +6,7 @@ import "./form-details.css";
 import { DemoBanner } from "../components/DemoBanner";
 
 export const metadata = {
-  title: "O jardim do Estevão",
+  title: "O jardim do Estêvão",
   description: "Um chá de fraldas, um jardim cheio de carinho.",
 };
 

@@ -1,4 +1,4 @@
-# O jardim do Estevão
+# O jardim do Estêvão
 
 Next.js App Router + TypeScript. Carta-convite → cadastro, parentesco, fralda, mimo opcional e recado → convite ao jardim → editor LPC em tela inteira → jardim interativo em tela inteira.
 
@@ -11,7 +11,7 @@ npm run dev -- --webpack
 
 Abra http://localhost:3000. O `.env.local` desta instalação está conectado ao projeto Neon informado, branch `production`. O modo real está ativo: participações persistem no banco. A senha de `/familia` está na variável `FAMILY_PASSWORD` desse arquivo, que não é versionado.
 
-Para demonstração descartável, use `NEXT_PUBLIC_DEMO_MODE=true` e reinicie. Inclui 12 convidados fictícios, 9 sentados. Dados existem somente em memória; atualizar a página reinicia o teste. Na família, a senha demo vem preenchida. Volte para `false` antes de publicar a lista real.
+Para demonstração descartável, use `NEXT_PUBLIC_DEMO_MODE=true` e reinicie. Inclui 12 convidados fictícios, 9 sentados. Os dados da demonstração ficam neste navegador. Use “Recomeçar teste” para limpar. Na família, a senha demo vem preenchida. Volte para `false` antes de publicar a lista real.
 
 ## Banco e deploy
 
@@ -46,7 +46,7 @@ Na Vercel, importe o repositório como Next.js e configure `DATABASE_URL`, `FAMI
 
 ## Funcionamento
 
-Cadastro salvo antes de oferecer o jardim. O navegador guarda somente o recibo para escolher/trocar a cadeira daquela participação. Limpar os dados do navegador perde a autorização; não há recuperação por contato nesta versão.
+O cadastro fica no servidor. O visitante cria e senta o personagem na visita inicial. A conta Google permite editar depois e pode ser vinculada ao confirmar a cadeira. O cookie HttpOnly identifica a sessão.
 
 Todos os depoimentos são públicos. Contatos, parentesco e presentes ficam na área da família protegida por senha. Reserva não efetua compra nem confirma entrega. “Outro mimo” guarda texto livre sem estoque limitado.
 
@@ -79,3 +79,5 @@ npm run test:database
 ```
 
 O teste usa `API_BASE_URL` (padrão http://127.0.0.1:3001), endpoints reais e remove somente suas participações temporárias. Requer conexões Neon e `FAMILY_PASSWORD` no `.env.local`. O build usa Webpack explicitamente.
+
+[Fluxos do chá e diagrama da arquitetura](./FLUXOS.md)

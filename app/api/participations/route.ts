@@ -1,11 +1,9 @@
+import { sessionOwner } from "../../../lib/garden-session";
+import { randomBytes } from "node:crypto";
 import { database } from "../../../lib/database";
 import { hash, isFamily } from "../../../lib/security";
-import {
-  CUSTOM_GIFT_PREFIX,
-  diapers,
-  gifts,
-  isValidGift,
-} from "../../../data/items";
+import { CUSTOM_GIFT_PREFIX } from "../../../data/items";
+import { validSelection, type CatalogItem } from "../../../lib/catalog";
 export const dynamic = "force-dynamic";
 
 export async function GET(request: Request) {
@@ -20,7 +18,7 @@ export async function GET(request: Request) {
   try {
     const sql = database();
     const rows = family
-      ? await sql`SELECT id, name, contact, relationship, message, true AS "publicMessage", diaper, gift, seat, avatar FROM participations ORDER BY created_at DESC`
+      ? await sql`SELECT id, name, contact, relationship, message, true AS "publicMessage", diaper, gift, sponsor_id AS "sponsorId", seat, avatar FROM participations ORDER BY created_at DESC`
       : await sql`SELECT id, name, message, true AS "publicMessage", seat, avatar FROM participations ORDER BY seat NULLS LAST`;
     return Response.json(rows, { headers: { "Cache-Control": "no-store" } });
   } catch {
@@ -34,8 +32,16 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { id, token, name, contact, relationship, message, diaper, gift } =
-      body;
+    const { id, name, contact, relationship, message, diaper, gift } = body;
+    const session = await sessionOwner();
+    if (body.account && (!session || id !== session.owner_id))
+      return Response.json(
+        { error: "Entre novamente com o Google." },
+        { status: 401 },
+      );
+    const owner = body.account ? session!.owner_id : null;
+    const token = owner ? randomBytes(32).toString("hex") : body.token;
+    const sponsor = body.sponsor;
     if (
       typeof id !== "string" ||
       !/^[0-9a-f-]{36}$/.test(id) ||
@@ -51,8 +57,13 @@ export async function POST(request: Request) {
       relationship.length > 80 ||
       typeof message !== "string" ||
       message.length > 1000 ||
-      !diapers.some((item) => item.id === diaper) ||
-      !isValidGift(gift)
+      (sponsor == null
+        ? typeof diaper !== "string" || !diaper
+        : typeof sponsor !== "string" ||
+          !/^[a-f0-9-]{36}\.[a-f0-9]{64}$/.test(sponsor) ||
+          diaper !== "" ||
+          gift !== "") ||
+      (gift != null && typeof gift !== "string")
     ) {
       return Response.json(
         { error: "Confira os campos preenchidos." },
@@ -67,22 +78,39 @@ export async function POST(request: Request) {
     const result = await sql.begin(async (tx) => {
       await tx`SELECT pg_advisory_xact_lock(513280)`;
       const existing =
-        await tx`SELECT id FROM participations WHERE id = ${id} AND token_hash = ${hash(token)}`;
-      if (existing.length) return true; // Repetir envio após falha de rede não duplica.
-      for (const [column, item] of [
-        ["diaper", diapers.find((i) => i.id === diaper)],
-        ["gift", gifts.find((i) => i.id === gift)],
-      ] as const) {
-        if (!item) continue;
-        const counts =
-          column === "diaper"
-            ? await tx`SELECT count(*)::int AS count FROM participations WHERE diaper = ${item.id}`
-            : await tx`SELECT count(*)::int AS count FROM participations WHERE gift = ${item.id}`;
-        if (counts[0].count >= item.quantity) return false;
+        await tx`SELECT id FROM participations WHERE (id = ${id} AND token_hash = ${hash(token)}) OR google_owner = ${owner}`;
+      if (existing.length) return existing[0].id === id ? true : "linked"; // Repetir envio após falha de rede não duplica.
+      const [sponsorId, proof] = sponsor?.split(".") ?? [];
+      if (sponsorId) {
+        const [owner] =
+          await tx`SELECT token_hash FROM participations WHERE id::text = ${sponsorId} AND diaper IS NOT NULL`;
+        if (!owner || hash("family:" + owner.token_hash) !== proof)
+          return "invalid";
       }
-      await tx`INSERT INTO participations (id, token_hash, name, contact, relationship, message, public_message, diaper, gift) VALUES (${id}, ${hash(token)}, ${name.trim()}, ${contact.trim()}, ${relationship.trim()}, ${message.trim()}, ${true}, ${diaper}, ${storedGift})`;
+      if (!sponsorId) {
+        const items = await tx<CatalogItem[]>`SELECT * FROM gift_stock`;
+        if (
+          !validSelection(items, "diaper", diaper) ||
+          !validSelection(items, "gift", gift)
+        )
+          return false;
+      }
+      await tx`INSERT INTO participations (id, token_hash, name, contact, relationship, message, public_message, diaper, gift, sponsor_id, google_owner, guest_edit_until) VALUES (${id}, ${hash(token)}, ${name.trim()}, ${contact.trim()}, ${relationship.trim()}, ${message.trim()}, ${true}, ${diaper || null}, ${storedGift}, ${sponsorId ?? null}, ${owner}, CASE WHEN ${!!owner} THEN NULL ELSE now() + interval '2 hours' END)`;
       return true;
     });
+    if (result === "linked")
+      return Response.json(
+        {
+          error:
+            "Esta conta já possui uma participação. Entre novamente para retomá-la.",
+        },
+        { status: 409 },
+      );
+    if (result === "invalid")
+      return Response.json(
+        { error: "Este convite familiar é inválido." },
+        { status: 400 },
+      );
     return result
       ? Response.json({ id }, { status: 201 })
       : Response.json(
@@ -101,14 +129,22 @@ export async function POST(request: Request) {
 }
 
 export async function DELETE(request: Request) {
-  if (!isFamily(request)) return Response.json({ error: "Senha inválida." }, { status: 401 });
+  if (!isFamily(request))
+    return Response.json({ error: "Senha inválida." }, { status: 401 });
   try {
     const { id } = await request.json();
-    if (typeof id !== "string") return Response.json({ error: "Participação inválida." }, { status: 400 });
+    if (typeof id !== "string")
+      return Response.json(
+        { error: "Participação inválida." },
+        { status: 400 },
+      );
     const sql = database();
     await sql`DELETE FROM participations WHERE id = ${id}`;
     return Response.json({ ok: true });
   } catch {
-    return Response.json({ error: "Não foi possível apagar a participação." }, { status: 503 });
+    return Response.json(
+      { error: "Não foi possível apagar a participação." },
+      { status: 503 },
+    );
   }
 }

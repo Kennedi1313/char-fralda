@@ -15,3 +15,13 @@ export const jsonRequest = (body: unknown): RequestInit => ({
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify(body),
 });
+
+// Passed only across the immediate client-side navigation, never persisted.
+import type { Identity } from "../components/EntryChoice";
+let pendingGuest: Identity | null = null;
+export function passGuestToGarden(receipt: Identity) { pendingGuest = receipt; }
+export function takeGuestForGarden() {
+  const guest = pendingGuest;
+  pendingGuest = null;
+  return guest;
+}

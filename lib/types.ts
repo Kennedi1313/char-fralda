@@ -1,4 +1,5 @@
 export type Avatar = {
+  child?: boolean;
   skin: string;
   hair: string;
   shirt: string;
@@ -11,6 +12,7 @@ export type AvatarCategory = 'hair' | 'top' | 'bottom' | 'shoes' | 'hat' | 'bear
 export type Participation = {
   id: string;
   name: string;
+  sponsorId?: string;
   contact?: string;
   relationship?: string;
   message: string;

@@ -4,7 +4,7 @@ import { randomUUID, randomBytes, createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
 import postgres from "postgres";
 import nextEnv from "@next/env";
-import { diapers, gifts, CUSTOM_GIFT_PREFIX } from "../data/items.ts";
+import { CUSTOM_GIFT_PREFIX } from "../data/items.ts";
 import { defaultAvatar, SEAT_COUNT } from "../lib/types.ts";
 
 const { loadEnvConfig } = nextEnv;
@@ -25,7 +25,7 @@ const identities = Array.from({ length: 2 }, () => {
     tokenHash: createHash("sha256").update(token).digest("hex"),
   };
 });
-const catalogIds = new Set([...diapers, ...gifts].map((item) => item.id));
+
 let sql;
 let stage = "configuration";
 let passed = false;
@@ -89,6 +89,9 @@ try {
     (_, index) => index + 1,
   ).filter((seat) => !occupiedSeats.has(seat));
   check(freeSeats.length > 0);
+  const catalog = await request("/api/catalog");
+  const catalogIds = new Set(catalog.map(item => item.id));
+  const diapers = catalog.filter(item => item.kind === "diaper" && item.active);
   const availability = await request("/api/availability");
   checkAvailability(availability);
   const remaining = diapers.flatMap((item) =>

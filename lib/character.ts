@@ -3,7 +3,7 @@ import { Avatar, AvatarCategory, palette } from './types';
 
 export type BodyType = 'male' | 'female';
 export type CharacterItem = { id: string; category: AvatarCategory; label: string; images: Partial<Record<BodyType, string>> };
-export const characterItems = catalog.items as CharacterItem[];
+export const characterItems = (catalog.items as CharacterItem[]).filter(item => item.id !== "feet-boots");
 export const categories: { id: Exclude<AvatarCategory, 'cape'> | 'body'; label: string; icon: string }[] = [
   {id:'body',label:'Corpo e pele',icon:'M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM4 21v-2a8 8 0 0 1 16 0v2'},
   {id:'hair',label:'Cabelos',icon:'M4 20V10a8 8 0 0 1 16 0v10M4 11c4 0 7-3 8-6 1 4 4 6 8 6M8 13v2a4 4 0 0 0 8 0v-2'},
@@ -51,6 +51,7 @@ export function normalizeAvatar(value: Avatar): Avatar {
     bottom:{id:'legs-pants',color:'#385884'}, shoes:{id:'feet-shoes',color:'#815137'},
   };
   const parts = {...defaults,...value.parts};
+  if (parts.shoes?.id === "feet-boots") parts.shoes = {...parts.shoes, id:"feet-shoes"};
   for(const category of Object.keys(parts) as AvatarCategory[]) {
     const part = parts[category];
     if(part?.id && !findItem(part.id)?.images[body]) {
@@ -64,6 +65,7 @@ export function isValidAvatar(value: unknown): value is Avatar {
   if(!value || typeof value !== 'object') return false;
   const avatar = value as Avatar;
   if(!palette.skin.includes(avatar.skin) || !palette.hair.includes(avatar.hair) || !palette.shirt.includes(avatar.shirt) || !Number.isInteger(avatar.style) || avatar.style<0 || avatar.style>5) return false;
+  if(avatar.child !== undefined && typeof avatar.child !== "boolean") return false;
   if(avatar.body !== undefined && !['male','female'].includes(avatar.body)) return false;
   if(avatar.skinTone !== undefined && !skinTones.some(tone=>tone.id===avatar.skinTone)) return false;
   if(avatar.parts !== undefined) {

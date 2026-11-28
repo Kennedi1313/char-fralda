@@ -1,36 +1,71 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, MotionConfig } from "motion/react";
 import { ParticipationFlow } from "../components/ParticipationFlow";
-import { AVATAR_KEY, RECEIPT_KEY, SEAT_KEY } from "../lib/demo";
+import { DEMO_MODE } from "../lib/demo";
+import { EntryChoice, type GoogleEntry } from "../components/EntryChoice";
+import { api } from "../lib/client";
 export default function Home() {
+  const pickedIdentity = useRef(false);
+  const [choosing, setChoosing] = useState(false);
+  const [googleEntry, setGoogleEntry] = useState<GoogleEntry | null>(null);
+
+  const enterGoogle = useCallback((entry: GoogleEntry) => {
+    pickedIdentity.current = true;
+    setGoogleEntry(entry);
+    setChoosing(false);
+    setStarted(true);
+  }, []);
   const [open, setOpen] = useState(false);
   const [started, setStarted] = useState(false);
   const [returningGuest, setReturningGuest] = useState(false);
   const [guestName, setGuestName] = useState("");
+  const [sponsor, setSponsor] = useState<string | null>(null);
   useEffect(() => {
-    try {
-      const saved = localStorage.getItem(RECEIPT_KEY);
-      if (saved) {
-        setReturningGuest(true);
-        setGuestName((JSON.parse(saved) as { name?: string }).name ?? "");
-      }
-    } catch {}
+    const invite = new URLSearchParams(location.search).get("familia");
+    if (invite !== null) {
+      setSponsor(invite);
+
+      setChoosing(true);
+      return;
+    }
+    if (!DEMO_MODE)
+      api<GoogleEntry | null>("/api/auth/session")
+        .then((entry) => {
+          if (!entry || pickedIdentity.current) return;
+          setGoogleEntry(entry);
+          setReturningGuest(entry.registered);
+          setGuestName(entry.receipt.name);
+        })
+        .catch(() => {});
   }, []);
   return (
     <MotionConfig reducedMotion="user">
       <main>
         <nav className="navigation shell">
           <a href="/" className="brand">
-            ✿ &nbsp; Chá do estevão
+            ✿ &nbsp; Chá do Estêvão
           </a>
+          {returningGuest && <a href="/perfil">Meu perfil</a>}
           <a href="/familia">Área da família</a>
           <a href="/jardim">Entrar no jardim</a>
         </nav>
-        {started ? (
+        {choosing ? (
+          <EntryChoice
+            onGoogle={enterGoogle}
+            onGuest={() => {
+              pickedIdentity.current = true;
+              setGoogleEntry(null);
+              setChoosing(false);
+              setStarted(true);
+            }}
+            onBack={() => location.assign("/")}
+          />
+        ) : started ? (
           <ParticipationFlow
-            onClose={() => setStarted(false)}
-            startInGarden={returningGuest}
+            onClose={() => location.assign("/")}
+            googleEntry={googleEntry}
+            sponsor={sponsor}
           />
         ) : (
           <section className="invitation">
@@ -106,7 +141,10 @@ export default function Home() {
                   className="primary"
                   tabIndex={open ? 0 : -1}
                   onClick={() => {
-                    setStarted(true);
+                    if (returningGuest && googleEntry?.avatar)
+                      location.assign("/jardim");
+                    else if (returningGuest) setStarted(true);
+                    else setChoosing(true);
                   }}
                 >
                   {returningGuest ? "Ir para o jardim" : "Quero participar"}
@@ -115,12 +153,9 @@ export default function Home() {
                   <button
                     className="text-button letter-secondary-action"
                     onClick={() => {
-                      localStorage.removeItem(RECEIPT_KEY);
-                      localStorage.removeItem(AVATAR_KEY);
-                      localStorage.removeItem(SEAT_KEY);
                       setReturningGuest(false);
                       setGuestName("");
-                      setStarted(true);
+                      setChoosing(true);
                     }}
                   >
                     Continuar como outra pessoa
@@ -148,7 +183,7 @@ export default function Home() {
           </section>
         )}
         <footer className="shell">
-          <span>Chá do estevão</span>
+          <span>Chá do Estêvão</span>
           <span>@ 2026 - Kennedi Rodrigues</span>
         </footer>
       </main>

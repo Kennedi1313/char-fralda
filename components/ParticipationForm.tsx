@@ -3,9 +3,9 @@ import { FormEvent, useState } from "react";
 import {
   CUSTOM_GIFT_PREFIX,
   CUSTOM_GIFT_MAX_LENGTH,
-  diapers,
-  gifts,
+
 } from "../data/items";
+import type { CatalogItem } from "../lib/catalog";
 import { relationships } from "../data/relationships";
 import { GiftCard } from "./GiftCard";
 export type Registration = {
@@ -17,19 +17,25 @@ export type Registration = {
   message: string;
 };
 export function ParticipationForm({
+  initialName = "",
   onSubmit,
   busy,
   error,
   counts,
+  catalog,
+  family = false,
 }: {
+  initialName?: string;
   onSubmit: (form: Registration) => void;
   busy: boolean;
   error: string;
+  family?: boolean;
+  catalog: CatalogItem[];
   counts: Record<string, number>;
 }) {
   const [step, setStep] = useState(0);
   const [form, setForm] = useState<Registration>({
-    name: "",
+    name: initialName,
     contact: "",
     relationship: "",
     diaper: "",
@@ -41,7 +47,7 @@ export function ParticipationForm({
   const [mimosOpen, setMimosOpen] = useState(false);
   function submit(event: FormEvent) {
     event.preventDefault();
-    if (step < 2) {
+    if (!family && step < 2) {
       setStep(step + 1);
       window.scrollTo({ top: 0 });
       return;
@@ -60,20 +66,20 @@ export function ParticipationForm({
   }
   return (
     <>
-      <p className="eyebrow">UM CARINHO PARA O ESTEVÃO</p>
+
       <ol className="form-stepper">
-        {["Sobre você", "Presentes", "Seu recado"].map((label, i) => (
+        {(family ? ["Convite da família"] : ["Sobre você", "Presentes", "Seu recado"]).map((label, i) => (
           <li key={label} aria-current={step === i ? "step" : undefined}>
             <span>{i < step ? "✓" : i + 1}</span>
             {label}
           </li>
         ))}
       </ol>
-      <form onSubmit={submit}>
+      <form className={step === 1 ? "present-form" : undefined} key={step} onSubmit={submit}>
         {step === 0 && (
           <>
-            <h2>Vamos começar por você.</h2>
-            <p>Como você faz parte da história do nosso pequeno?</p>
+            <h2>Quem vem ao chá?</h2>
+            <p>Conte seu nome e como você conhece a família.</p>
             <label>
               Seu nome
               <input
@@ -87,7 +93,7 @@ export function ParticipationForm({
               />
             </label>
             <label>
-              Seu vínculo com o Estevão
+              Seu vínculo com o Estêvão
               <select
                 required
                 value={form.relationship}
@@ -129,30 +135,19 @@ export function ParticipationForm({
         )}
         {step === 1 && (
           <>
-            <p className="eyebrow">CUIDADO EM FORMA DE PRESENTE</p>
+
+            <div className="present-options">
             <h2>O que você quer trazer?</h2>
-            <p>
-              Uma fralda já é um carinho enorme. O mimo é totalmente opcional.
-            </p>
-            <aside className="catalog-note">
-              Lista de exemplo: marcas e detalhes serão confirmados pela
-              família. A seleção reserva o presente, sem efetuar compra.
-            </aside>
             <fieldset>
               <legend>
                 Um pacote de fraldas <small>escolha o tamanho</small>
               </legend>
+              {!catalog.some(i=>i.active && i.kind==="diaper" && i.quantity>i.reserved) && <p>Nenhuma fralda disponível no momento.</p>}
               <div className="gift-grid">
-                {diapers.map((item) => (
-                  <GiftCard
-                    key={item.id}
-                    item={item}
-                    counts={counts}
+                {catalog.filter(i=>i.active && i.kind==="diaper").map((item) => (
+                  <GiftCard key={item.id} item={item} counts={counts} group="diaper"
                     checked={form.diaper === item.id}
-                    group="diaper"
-                    required
-                    onChange={() => setForm({ ...form, diaper: item.id })}
-                  />
+                    onChange={() => setForm({ ...form, diaper: item.id })} />
                 ))}
               </div>
             </fieldset>
@@ -165,7 +160,7 @@ export function ParticipationForm({
               <fieldset>
                 <legend>Escolha um mimo</legend>
                 <div className="gift-grid">
-                  {gifts.map((item) => (
+                  {catalog.filter(i=>i.active && i.kind==="gift").map((item) => (
                     <GiftCard
                       key={item.id}
                       item={item}
@@ -203,11 +198,12 @@ export function ParticipationForm({
                 )}
               </fieldset>
             </details>
+            </div>
           </>
         )}
         {step === 2 && (
           <>
-            <h2>Palavras que vão ficar.</h2>
+            <h2>Um recado para Estêvão</h2>
             <p>Um desejo, uma lembrança ou um simples “estamos aqui”.</p>
             <label>
               Seu depoimento <small>opcional</small>
@@ -216,7 +212,7 @@ export function ParticipationForm({
                 rows={6}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                placeholder="Querido Estevão…"
+                placeholder="Querido Estêvão…"
               />
             </label>
             <p>
@@ -243,10 +239,10 @@ export function ParticipationForm({
               Voltar
             </button>
           )}
-          <button className="primary" disabled={busy}>
+          <button className="primary" disabled={busy || (step===1 && !catalog.some(i=>i.id===form.diaper && i.active && i.quantity>i.reserved))}>
             {busy
               ? "Salvando…"
-              : step === 2
+              : family ? "Criar meu personagem" : step === 2
                 ? "Confirmar meu carinho"
                 : "Continuar"}
           </button>
