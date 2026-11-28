@@ -44,11 +44,9 @@ export default function Home() {
       <main>
         <nav className="navigation shell">
           <a href="/" className="brand">
-            ✿ &nbsp; Chá do Estêvão
+            Chá do Estêvão
           </a>
           {returningGuest && <a href="/perfil">Meu perfil</a>}
-          <a href="/familia">Área da família</a>
-          <a href="/jardim">Entrar no jardim</a>
         </nav>
         {choosing ? (
           <EntryChoice
@@ -149,18 +147,6 @@ export default function Home() {
                 >
                   {returningGuest ? "Ir para o jardim" : "Quero participar"}
                 </button>
-                {returningGuest && (
-                  <button
-                    className="text-button letter-secondary-action"
-                    onClick={() => {
-                      setReturningGuest(false);
-                      setGuestName("");
-                      setChoosing(true);
-                    }}
-                  >
-                    Continuar como outra pessoa
-                  </button>
-                )}
                 <small>Com amor, Amanda e Kennedi</small>
               </motion.article>
               <div className="envelope-front" />

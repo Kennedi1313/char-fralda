@@ -284,21 +284,6 @@ export function ParticipationFlow({
             <span className="eyebrow">SEU CANTINHO NESSA HISTÓRIA</span>
           </div>
           {signedIn && <a className="text-button" href="/perfil">Meu perfil</a>}
-          {signedIn && (
-            <button
-              className="text-button"
-              onClick={async () => {
-                try {
-                  await api("/api/auth/session", { method: "DELETE" });
-                  location.replace("/jardim");
-                } catch {
-                  setError("Não foi possível sair. Tente novamente.");
-                }
-              }}
-            >
-              Sair da conta
-            </button>
-          )}
           {canChooseSeat && !receipt?.family && (
             <button
               id="invite-family-button"
@@ -404,17 +389,13 @@ export function ParticipationFlow({
                 </strong>
                 <small>
                   {error ||
-                    (seated
-                      ? DEMO_MODE
-                        ? "Lugar confirmado nesta demonstração."
-                        : "Seu bonequinho fica aqui mesmo depois de você sair."
-                      : "Escolha uma cadeira livre; você verá uma prévia antes de confirmar.")}
+                    (!seated && "Escolha uma cadeira livre; você verá uma prévia antes de confirmar.")}
                 </small>
               </div>
             </div>
             {seated && !signedIn ? null : seated ? (
               <button
-                className="secondary"
+                className="primary"
                 disabled={busy}
                 onClick={() => {
                   setSeat(undefined);

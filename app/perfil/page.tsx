@@ -268,6 +268,19 @@ export default function ProfilePage() {
               </>
             )}
           </section>
+          <button
+            className="text-button"
+            onClick={async () => {
+              try {
+                await api("/api/auth/session", { method: "DELETE" });
+                location.replace("/jardim");
+              } catch {
+                console.log("Não foi possível sair. Tente novamente.");
+              }
+            }}
+          >
+            Sair da conta
+          </button>
         </div>
       )}
     </main>

@@ -156,11 +156,6 @@ export function EntryChoice({
         <button className="text-button guest-action" onClick={enterGuest}>
           Continuar sem conta
         </button>
-        <p>
-          Sem conta, você cria seu boneco e escolhe um lugar nesta visita.
-          Quando voltar, só poderá ver o jardim. Ao sentar, ainda dá para
-          vincular sua conta.
-        </p>
         {error && <p role="alert">{error}</p>}
       </div>
     </InvitationSheet>
