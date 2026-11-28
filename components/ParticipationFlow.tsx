@@ -268,18 +268,11 @@ export function ParticipationFlow({
         aria-label="Escolha seu lugar no jardim"
       >
         <header className="experience-header">
-          {canChooseSeat && (signedIn || !seated) ? (
-            <button
-              className="text-button"
-              onClick={() => setStage("character")}
-            >
-              Editar personagem
-            </button>
-          ) : (
+          {!canChooseSeat && 
             <a href="/" className="text-button">
               Voltar ao convite
             </a>
-          )}
+          }
           <div>
             <span className="eyebrow">SEU CANTINHO NESSA HISTÓRIA</span>
           </div>
@@ -385,12 +378,7 @@ export function ParticipationFlow({
               <div>
                 <strong>
                   {receipt?.name}
-                  {seat ? ` · Cadeira ${seat}` : ""}
                 </strong>
-                <small>
-                  {error ||
-                    (!seated && "Escolha uma cadeira livre; você verá uma prévia antes de confirmar.")}
-                </small>
               </div>
             </div>
             {seated && !signedIn ? null : seated ? (

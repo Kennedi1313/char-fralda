@@ -131,6 +131,6 @@ export function Garden({pending=false,guests,onSeat,selected,previewAvatar,ownId
         <g className="fireflies" aria-hidden="true">{[[124,460],[820,190],[310,762],[639,255],[1260,600],[170,180],[1190,720],[510,850],[1410,340],[328,585]].map(([x,y],i)=><circle key={i} cx={x} cy={y} r="3" style={{animationDelay:`${i*.7}s`}}/>)}</g>
         <g className="pond-shimmer" aria-hidden="true"><path d="M200 430h20m40 32h24m-52 47h16m70-90h20" stroke="#d5f1d9" strokeWidth="2" fill="none"/></g>
       </svg></div>
-    </div><div className="game-legend"><span>{canSelect ? "Arraste para explorar · Escolha uma cadeira livre." : "Arraste para explorar · Toque em alguém para ler o recado."}</span><a href="/creditos" target="_blank" rel="noreferrer">Arte e créditos LPC</a></div>
+    </div>
   </section>;
 }
