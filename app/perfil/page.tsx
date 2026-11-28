@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState, type FormEvent } from "react";
-import { Armchair, Gift, UserRound, ArrowLeft, Shirt } from "lucide-react";
+import { Armchair, Gift, UserRound, ArrowLeft, Shirt, ArrowRight } from "lucide-react";
 import { Avatar } from "../../components/Avatar";
 import { api, jsonRequest } from "../../lib/client";
 import { catalogName, type CatalogItem } from "../../lib/catalog";
@@ -79,9 +79,14 @@ export default function ProfilePage() {
   }
   return (
     <main className="shell account-shell">
-      <a className="account-back" href="/">
-        <ArrowLeft size={16} /> Voltar ao convite
-      </a>
+      <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+        <a className="account-back" href="/">
+          <ArrowLeft size={16} /> Voltar ao convite
+        </a>
+        <a className="account-back" href="/jardim">
+          <ArrowRight size={16} /> Ir ao Jardim
+        </a>
+      </div>
       <h1>Meu perfil</h1>
       {status && (
         <p className="notice" role="status">
